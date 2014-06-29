@@ -1,0 +1,8 @@
+Buildfile: \\psf\Home\Documents\GitHub\MxBootswatch\deployment\build_core.xml
+
+
+clean:
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+

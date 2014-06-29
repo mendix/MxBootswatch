@@ -1,0 +1,8 @@
+Buildfile: \\psf\Home\Documents\GitHub\MxBootswatch\deployment\build_webui.xml
+
+clean:
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+

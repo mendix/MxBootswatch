@@ -20,7 +20,7 @@ module.exports = function (grunt) {
     swatch: {
       amelia:{}, cerulean:{}, cosmo:{}, cyborg:{}, darkly:{},
       flatly:{}, journal:{}, lumen:{}, readable:{}, simplex:{},
-      slate:{}, spacelab:{}, superhero:{}, united:{}, yeti:{},
+      slate:{}, spacelab:{}, superhero:{}, united:{},yeti:{},
       custom:{}
     },
     clean: {
@@ -92,13 +92,12 @@ module.exports = function (grunt) {
     grunt.config('less.dist.options.compress', false);
 
     grunt.task.run(['concat', 'less:dist', 'clean:build',
-      compress ? 'compressLess:'+lessDest+':'+'<%=builddir%>/' + theme + '/ui/theme-'+theme+'/css/bootstrap.min.css':'none',]);
-
+      compress ? 'compressLess:'+lessDest+':'+'<%=builddir%>/' + theme + '/ui/theme-'+theme+'/css/bootstrap.min.css':'none']);
 
     grunt.config('copy.main.files',[{src:'<%=builddir%>/fonts/**', dest:'<%=builddir%>/' + theme + '/ui/theme-'+theme+'/'}]);
     grunt.task.run('copy');
 
-    grunt.config('compress.main.options.archive', theme+'.zip');
+    grunt.config('compress.main.options.archive', '<%=builddir%>/zipped themes/'+theme+'.zip');
     grunt.config('compress.main.options.mode', 'zip');
     grunt.config('compress.main.files', [{src:['**'], cwd:'<%=builddir%>/' + theme, dest:'.',expand:true}]);
     grunt.task.run('compress');
@@ -116,9 +115,33 @@ module.exports = function (grunt) {
     grunt.task.run(['less:dist']);
   });
 
+    grunt.registerMultiTask('buildmulti', 'build a multi theme', function() {
+      var t = this.target;
+      
+    });
+
+
+  grunt.registerTask('makemultitheme', 'build a multi theme', function(theme) {
+
+          grunt.config('copy.main.files',[{cwd:'<%=builddir%>/'+theme+'/ui/', src:['**'], dest:'<%=builddir%>/mxbootswatch-demo/ui/', expand:true},
+      {src:'<%=builddir%>/'+theme+'/index.html', dest:'<%=builddir%>/mxbootswatch-demo/index-'+theme+'.html',filter: 'isFile'}]);
+    grunt.task.run('copy');
+
+
+  });  
+
+  grunt.registerTask('makemultizip','Make multi zip',function(){
+
+    grunt.config('compress.main.options.archive', '<%=builddir%>/zipped themes/bootswatch.zip');
+    grunt.config('compress.main.options.mode', 'zip');
+    grunt.config('compress.main.files', [{src:['**'], cwd:'<%=builddir%>/mxbootswatch-demo', dest:'.',expand:true}]);
+    grunt.task.run('compress');
+  });
+
   grunt.registerMultiTask('swatch', 'build a theme', function() {
     var t = this.target;
     grunt.task.run('build:'+t);
+    grunt.task.run('makemultitheme:'+t);
   });
 
   grunt.registerTask('default', 'build a theme', function() {

@@ -1,0 +1,23 @@
+{
+  "RuntimeVersion": "5.4.1",
+  "ProjectID": "1dcfc2e8-e524-403f-84dd-7634b4117467",
+  "ProjectName": "Bootswatch",
+  "ModelVersion": "unversioned",
+  "Description": "",
+  "AdminUser": "MxAdmin",
+  "Roles": {
+    "8dd52bfa-6d7e-453b-b506-303c0a3d9567": {
+      "Name": "Administrator",
+      "ManageableRoles": [
+        "8dd52bfa-6d7e-453b-b506-303c0a3d9567",
+        "53f5d6fa-6da9-4a71-b011-454ec052cce8"
+      ]
+    },
+    "53f5d6fa-6da9-4a71-b011-454ec052cce8": {
+      "Name": "User"
+    }
+  },
+  "AdminRole": "8dd52bfa-6d7e-453b-b506-303c0a3d9567",
+  "Constants": [],
+  "ScheduledEvents": []
+}
