@@ -26,7 +26,7 @@ A simple API is available for integrating your platform with Mendix and Bootswat
 Included in this project is a Grunt.js file which enables you to easily combile your less files and create the appropriate zip files for you themes.
 
 To build a theme using grunt simply type:
-grunt swatch : {themename}
+`grunt swatch : themename`
 
 Alternatively you can build all the themes using the command swatch.
 
