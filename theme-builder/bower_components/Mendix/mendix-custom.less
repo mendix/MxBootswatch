@@ -313,7 +313,7 @@ input[type="radio"], input[type="checkbox"] {
 
 .mobileHeader{ 
 	.mx-header{
-		background:@navbar-default-bg;
+		.btn-shadow(@navbar-default-bg);
 	}
 	.mx-layoutcontainer-wrapper{
 		padding:0px;
@@ -362,32 +362,4 @@ input[type="radio"], input[type="checkbox"] {
 	glyphicon-align-justify{
 		color:@mx-navbar-color;
 	}
-}
-@{theme-name}{
-.mx-window-active .mx-window-header{
-	background: @mx-header-bg;
-}
-.mx-dataview-controls{
-	background: @mx-dataview-controls;
-
-}
-.mx-datagrid-head-table{
-	background: @mx-datagrid-head-table-bg;
-}
-
-.mx-list > li:hover, .mx-list-striped > li:nth-child(2n+1):hover{
-	background: @mx-list-hover-bg;
-}
-
-.mx-list > li{
-	background: @mx-list-bg;
-
-}
-.mx-list-striped > li:nth-child(2n+1){
-	background: @mx-list-striped-bg;
-}
-
-.mx-templategrid-item.selected{
-	background:@mx-templategrid-itemselected-bg;
-}
 }
