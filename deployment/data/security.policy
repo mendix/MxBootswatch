@@ -67,6 +67,7 @@ ALLOW {
   (java.io.FilePermission "//psf/Home/Documents/GitHub/MxBootswatch/deployment/model/resources/-"  "read")
   (java.io.FilePermission "//psf/Home/Documents/GitHub/MxBootswatch/deployment/model/lib/-"  "read")
   (java.net.SocketPermission "*" "connect, accept")
+  (java.net.SocketPermission "localhost:0" "listen,resolve")
   (java.lang.RuntimePermission "getProtectionDomain")
   (java.lang.RuntimePermission "getClassLoader")
   (java.lang.RuntimePermission "setContextClassLoader")

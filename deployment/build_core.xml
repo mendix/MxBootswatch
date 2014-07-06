@@ -13,7 +13,7 @@
     </delete>
   </target>
   <target name="deploy" description="deploy the project">
-    <unzip src="C:/Program Files (x86)/Mendix/5.4.1\modeler\deployment.mxz" dest="${deployment}" />
+    <unzip src="C:/Program Files (x86)/Mendix/5.6.0\modeler\deployment.mxz" dest="${deployment}" />
     <copy todir="${model}/lib/userlib">
       <fileset dir="userlib">
         <exclude name="**/*.jar" />
@@ -27,16 +27,16 @@
     <javac destdir="${deployment}/run/bin" includeAntRuntime="false" debug="true" debuglevel="lines,source" encoding="UTF-8">
       <src path="javasource" />
       <classpath>
-        <fileset file="C:/Program Files (x86)/Mendix/5.4.1/runtime/bundles/biz.aQute.bnd.annotation-2.1.0.jar" />
-        <fileset file="C:/Program Files (x86)/Mendix/5.4.1/runtime/bundles/org.scala-lang.scala-library-2.10.2.jar" />
-        <fileset file="C:/Program Files (x86)/Mendix/5.4.1/runtime/bundles/json.jar" />
-        <fileset file="C:/Program Files (x86)/Mendix/5.4.1/runtime/bundles/logging.jar" />
-        <fileset file="C:/Program Files (x86)/Mendix/5.4.1/runtime/bundles/m2ee-api.jar" />
-        <fileset file="C:/Program Files (x86)/Mendix/5.4.1/runtime/bundles/mxruntime.jar" />
-        <fileset file="C:/Program Files (x86)/Mendix/5.4.1/runtime/bundles/integration.jar" />
-        <fileset file="C:/Program Files (x86)/Mendix/5.4.1/runtime/bundles/osgi.cmpn-4.2.0.jar" />
-        <fileset file="C:/Program Files (x86)/Mendix/5.4.1/runtime/bundles/webui.jar" />
-        <fileset file="C:/Program Files (x86)/Mendix/5.4.1/runtime/bundles/javax.servlet-3.0.0.jar" />
+        <fileset file="C:/Program Files (x86)/Mendix/5.6.0/runtime/bundles/biz.aQute.bnd.annotation.jar" />
+        <fileset file="C:/Program Files (x86)/Mendix/5.6.0/runtime/bundles/org.scala-lang.scala-library.jar" />
+        <fileset file="C:/Program Files (x86)/Mendix/5.6.0/runtime/bundles/json.jar" />
+        <fileset file="C:/Program Files (x86)/Mendix/5.6.0/runtime/bundles/logging.jar" />
+        <fileset file="C:/Program Files (x86)/Mendix/5.6.0/runtime/bundles/m2ee-api.jar" />
+        <fileset file="C:/Program Files (x86)/Mendix/5.6.0/runtime/bundles/mxruntime.jar" />
+        <fileset file="C:/Program Files (x86)/Mendix/5.6.0/runtime/bundles/integration.jar" />
+        <fileset file="C:/Program Files (x86)/Mendix/5.6.0/runtime/bundles/osgi.cmpn.jar" />
+        <fileset file="C:/Program Files (x86)/Mendix/5.6.0/runtime/bundles/webui.jar" />
+        <fileset file="C:/Program Files (x86)/Mendix/5.6.0/runtime/bundles/javax.servlet.jar" />
         <fileset dir="userlib">
           <include name="*.jar" />
         </fileset>
@@ -48,20 +48,20 @@
     <javac destdir="${deployment}/run/bin" includeAntRuntime="false" debug="true" debuglevel="lines,source" encoding="UTF-8">
       <src path="javasource" />
       <classpath>
-        <fileset file="C:/Program Files (x86)/Mendix/5.4.1/runtime/bundles/biz.aQute.bnd.annotation-2.1.0.jar" />
-        <fileset file="C:/Program Files (x86)/Mendix/5.4.1/runtime/bundles/org.scala-lang.scala-library-2.10.2.jar" />
-        <fileset file="C:/Program Files (x86)/Mendix/5.4.1/runtime/bundles/json.jar" />
-        <fileset file="C:/Program Files (x86)/Mendix/5.4.1/runtime/bundles/logging.jar" />
-        <fileset file="C:/Program Files (x86)/Mendix/5.4.1/runtime/bundles/m2ee-api.jar" />
-        <fileset file="C:/Program Files (x86)/Mendix/5.4.1/runtime/bundles/mxruntime.jar" />
-        <fileset file="C:/Program Files (x86)/Mendix/5.4.1/runtime/bundles/integration.jar" />
-        <fileset file="C:/Program Files (x86)/Mendix/5.4.1/runtime/bundles/osgi.cmpn-4.2.0.jar" />
-        <fileset file="C:/Program Files (x86)/Mendix/5.4.1/runtime/bundles/webui.jar" />
-        <fileset file="C:/Program Files (x86)/Mendix/5.4.1/runtime/bundles/javax.servlet-3.0.0.jar" />
+        <fileset file="C:/Program Files (x86)/Mendix/5.6.0/runtime/bundles/biz.aQute.bnd.annotation.jar" />
+        <fileset file="C:/Program Files (x86)/Mendix/5.6.0/runtime/bundles/org.scala-lang.scala-library.jar" />
+        <fileset file="C:/Program Files (x86)/Mendix/5.6.0/runtime/bundles/json.jar" />
+        <fileset file="C:/Program Files (x86)/Mendix/5.6.0/runtime/bundles/logging.jar" />
+        <fileset file="C:/Program Files (x86)/Mendix/5.6.0/runtime/bundles/m2ee-api.jar" />
+        <fileset file="C:/Program Files (x86)/Mendix/5.6.0/runtime/bundles/mxruntime.jar" />
+        <fileset file="C:/Program Files (x86)/Mendix/5.6.0/runtime/bundles/integration.jar" />
+        <fileset file="C:/Program Files (x86)/Mendix/5.6.0/runtime/bundles/osgi.cmpn.jar" />
+        <fileset file="C:/Program Files (x86)/Mendix/5.6.0/runtime/bundles/webui.jar" />
+        <fileset file="C:/Program Files (x86)/Mendix/5.6.0/runtime/bundles/javax.servlet.jar" />
         <fileset dir="userlib">
           <include name="*.jar" />
         </fileset>
-        <fileset dir="C:/Program Files (x86)/Mendix/5.4.1/compatibility/legacyRuntimeLibraries">
+        <fileset dir="C:/Program Files (x86)/Mendix/5.6.0/compatibility/legacyRuntimeLibraries">
           <include name="*.jar" />
         </fileset>
       </classpath>

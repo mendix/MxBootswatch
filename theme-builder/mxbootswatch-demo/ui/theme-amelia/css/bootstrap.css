@@ -6319,10 +6319,12 @@ a.thumbnail.active {
 }
 .mx-dialog-warning .modal-header {
   border: none;
+  background: none;
 }
 .mx-dialog-warning .modal-footer {
   border: none;
   margin: 0px;
+  background: none;
 }
 .mx-dialog-warning button.close {
   float: right;
@@ -6357,10 +6359,12 @@ a.thumbnail.active {
 }
 .mx-dialog-error .modal-header {
   border: none;
+  background: none;
 }
 .mx-dialog-error .modal-footer {
   border: none;
   margin: 0px;
+  background: none;
 }
 .mx-dialog-error button.close {
   float: right;
@@ -6395,10 +6399,12 @@ a.thumbnail.active {
 }
 .mx-dialog-info .modal-header {
   border: none;
+  background: none;
 }
 .mx-dialog-info .modal-footer {
   border: none;
   margin: 0px;
+  background: none;
 }
 .mx-dialog-info button.close {
   float: right;
@@ -6464,72 +6470,114 @@ input[type="checkbox"] {
   border-style: none;
   background-color: transparent;
   padding: 0;
+  color: #e8d069;
 }
-.mx-list.pager > .active {
+.amelia .mx-list.pager > .active {
   border: 0px;
 }
-.mx-list.pager > li {
+.amelia .mx-list.pager > li {
   border-style: none;
   background-color: transparent;
   padding: 0;
+  color: #e8d069;
 }
-.mx-list.pager > li:last-child {
+.amelia .mx-list.pager > li:last-child {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+  border: none;
 }
-.mx-list.pagination > li {
+.amelia .mx-list.pager > li:hover {
+  background: none;
+  border: none;
+}
+.amelia .mx-list.pager > li:nth-child(2n+1):hover {
+  background: none;
+  border: none;
+}
+.amelia .mx-list.pager a {
+  color: #e8d069;
+}
+.amelia .mx-list.pagination .disabled > span,
+.amelia .mx-list.pagination > .disabled > span:hover,
+.amelia .mx-list.pagination > .disabled > span:focus,
+.amelia .mx-list.pagination > .disabled > a,
+.amelia .mx-list.pagination > .disabled > a:hover,
+.amelia .mx-list.pagination > .disabled > a:focus {
+  background-color: #13a0aa;
+}
+.amelia .mx-list.pagination > li {
   border-style: none;
   background-color: transparent;
   padding: 0;
+  color: #e8d069;
 }
-.mx-list.pagination > li:last-child {
+.amelia .mx-list.pagination > li:last-child {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-.mx-list.pagination li.active a {
-  color: #999999;
+.amelia .mx-list.pagination li.active a {
+  color: #ffffff;
 }
-.mx-list.pagination > .active {
+.amelia .mx-list.pagination > .active {
   border: 0px;
 }
-.mx-list.pagination > .active > a {
+.amelia .mx-list.pagination > .active > a {
   border-color: transparent;
 }
-.mx-list.pagination > .active > a:hover {
+.amelia .mx-list.pagination > .active > a:hover {
   border-color: transparent;
 }
-.mx-list.pagination > .active > a:focus {
+.amelia .mx-list.pagination > .active > a:focus {
   border-color: transparent;
 }
-.mx-list.pagination > .active > span {
+.amelia .mx-list.pagination > .active > span {
   border-color: transparent;
 }
-.mx-list.pagination > .active > span:hover {
+.amelia .mx-list.pagination > .active > span:hover {
   border-color: transparent;
 }
-.mx-list.pagination > .active > span:focus {
+.amelia .mx-list.pagination > .active > span:focus {
   border-color: transparent;
 }
-.mx-list.breadcrumb > .active {
+.amelia .mx-list.pagination a {
+  color: #e8d069;
+}
+.amelia .mx-list.breadcrumb > .active {
   border: 0px;
 }
-.mx-list.breadcrumb > li {
+.amelia .mx-list.breadcrumb > li {
   border-style: none;
   background-color: transparent;
   padding: 0;
+  color: #e8d069;
 }
-.mx-list.breadcrumb > li:last-child {
+.amelia .mx-list.breadcrumb > li:last-child {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-.mx-list.nav-pills > li {
+.amelia .mx-list.breadcrumb > li:hover {
+  background: none;
+  border: none;
+}
+.amelia .mx-list.breadcrumb > li:nth-child(2n+1):hover {
+  background: none;
+  border: none;
+}
+.amelia .mx-list.breadcrumb a {
+  color: #dddddd;
+}
+.amelia .mx-list.nav-pills > li {
   border-style: none;
   background-color: transparent;
   padding: 0;
+  color: #e8d069;
 }
-.mx-list.nav-pills > li:last-child {
+.amelia .mx-list.nav-pills > li:last-child {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+}
+.amelia .mx-list.nav-pills a {
+  color: #e8d069;
 }
 .leftFixed .mx-layoutcontainer-wrapper {
   position: fixed;
@@ -6547,17 +6595,19 @@ input[type="checkbox"] {
 /* Calendar
 ========================================================================== */
 .dijitCalendarContainer {
-  background-color: #13a0aa;
+  background-color: #ad1d28;
+  z-index: 99 !important;
 }
 .dijitCalendarContainer tr th,
 .dijitCalendarContainer tr td {
   padding: 6px;
   text-align: center;
+  color: #ffffff;
 }
 .dijitCalendarContainer tr th {
   text-align: center;
   color: #ffffff;
-  background-color: #13a0aa;
+  background-color: #48ca3b;
 }
 .dijitCalendarContainer tr .dijitCalendarArrow {
   cursor: pointer;
@@ -6574,6 +6624,12 @@ input[type="checkbox"] {
 .dijitCalendarMonthLabel {
   font-weight: bold;
 }
+.dijitCalendarMonthMenu .dijitCalendarMonthLabel {
+  color: #ffffff;
+}
+.dijitMenu.dijitCalendarMonthMenu {
+  background: #ad1d28;
+}
 .dijitCalendarSelectedDate,
 .dijitCalendarSelectedDate:hover {
   color: #ffffff;
@@ -6589,7 +6645,7 @@ input[type="checkbox"] {
 }
 .dijitCalendarYearContainer td {
   font-weight: bold;
-  border-top: 1px solid #dbdcdd;
+  border-top: 1px solid #0d747c;
   text-align: center;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
@@ -6609,8 +6665,8 @@ input[type="checkbox"] {
 }
 .mobileHeader .slidePanelRight {
   background-color: #ad1d28;
-  border-left: 1px solid #911821;
-  border-bottom: 1px solid #911821;
+  border-left: 1px solid #ad1d28;
+  border-bottom: 1px solid #ad1d28;
 }
 .mobileHeader .glyphicon-align-justify {
   color: #ffffff;
@@ -6634,6 +6690,9 @@ input[type="checkbox"] {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
 }
+.rightside-menu .navbar-nav > li > a {
+  border: none;
+}
 .navbar-fixed-top {
   color: #ffffff;
 }
@@ -6650,18 +6709,18 @@ input[type="checkbox"] {
   background: transparent;
 }
 .amelia .mx-datagrid-head-table {
-  background: #13a0aa;
+  background: transparent;
 }
 .amelia .mx-list > li:hover,
 .amelia .mx-list-striped > li:nth-child(2n+1):hover {
-  background: #0b5f65;
+  background: #13a0aa;
 }
 .amelia .mx-list > li {
-  background: #0d747c;
+  background: transparent;
 }
 .amelia .mx-list-striped > li:nth-child(2n+1) {
   background: #0f7f88;
 }
-.amelia .mx-templategrid-item.selected {
-  background: #0b5f65;
+.amelia .mx-datagrid .mx-datagrid-body-table .selected td {
+  background: #0f7f88;
 }

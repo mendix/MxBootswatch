@@ -1,8 +1,9 @@
 Buildfile: \\psf\Home\Documents\GitHub\MxBootswatch\deployment\build_webui.xml
 
 clean:
+   [delete] Deleting directory \\psf\Home\Documents\GitHub\MxBootswatch\deployment\web
 
 BUILD SUCCESSFUL
-Total time: 0 seconds
+Total time: 2 seconds
 
 

@@ -6281,85 +6281,148 @@ legend {
 .pager .disabled > a {
   border-color: #dddddd;
 }
-.mx-dialog-warning .modal-content {
-  color: #c09853;
-  background-color: #fcf8e3;
-  border-color: #fbeed5;
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
-  border-radius: 4px;
-}
-.mx-dialog-warning .modal-content h4 {
-  color: #c09853;
-}
-.mx-dialog-error .modal-content {
-  margin-top: 8px;
-  margin-bottom: 10px;
-  color: #b94a48;
-  background-color: #f2dede;
-  border-color: #eed3d7;
-  padding-right: 35px;
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
-  border-radius: 4px;
-}
-.mx-dialog-error .modal-content h4 {
-  color: #b94a48;
-}
-.mx-dialog-info .modal-content {
-  margin-top: 8px;
-  margin-bottom: 10px;
-  color: #3a87ad;
-  background-color: #d9edf7;
-  border-color: #bce8f1;
-  padding-right: 35px;
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
-  border-radius: 4px;
-}
-.mx-dialog-info .modal-content h4 {
-  color: #3a87ad;
-}
-.mx-dialog-warning button.close,
-.mx-dialog-info button.close,
-.mx-dialog-error button.close {
+.buttonClose {
   float: right;
-  font-size: 22.5px;
+  font-size: 21px;
   font-weight: bold;
   line-height: 1;
   color: inherit;
-  text-shadow: 0 1px 0 #fff;
+  text-shadow: 0 1px 0 #ffffff;
   opacity: .2;
   filter: alpha(opacity=20);
 }
-.mx-dialog-warning .close:hover,
-.mx-dialog-warning.close:focus,
-.mx-dialog-error .close:hover,
-.mx-dialog-error.close:focus,
-.mx-dialog-info .close:hover,
-.mx-dialog-info.close:focus {
-  color: #000;
+.buttonCloseHover {
+  color: inherit;
   text-decoration: none;
   cursor: pointer;
   opacity: .5;
   filter: alpha(opacity=50);
 }
-.mx-dialog-warning .modal-header,
-.mx-dialog-info .modal-header,
+.mx-dialog-warning .modal-content {
+  color: #c09853;
+  background-color: #fcf8e3;
+  border-color: #fbeed5;
+  padding: 15px 35px 15px 15px;
+  margin: 8px 0px 20px 0px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.mx-dialog-warning .modal-content h4 {
+  color: #c09853;
+}
+.mx-dialog-warning .modal-header {
+  border: none;
+  background: none;
+}
+.mx-dialog-warning .modal-footer {
+  border: none;
+  margin: 0px;
+  background: none;
+}
+.mx-dialog-warning button.close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: inherit;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: .2;
+  filter: alpha(opacity=20);
+}
+.mx-dialog-warning .close:hover,
+.mx-dialog-warning .close:focus {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: .5;
+  filter: alpha(opacity=50);
+}
+.mx-dialog-error .modal-content {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  padding: 15px 35px 15px 15px;
+  margin: 8px 0px 20px 0px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+.mx-dialog-error .modal-content h4 {
+  color: #b94a48;
+}
 .mx-dialog-error .modal-header {
   border: none;
+  background: none;
 }
-.mx-dialog-warning .modal-footer,
-.mx-dialog-error .modal-footer,
+.mx-dialog-error .modal-footer {
+  border: none;
+  margin: 0px;
+  background: none;
+}
+.mx-dialog-error button.close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: inherit;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: .2;
+  filter: alpha(opacity=20);
+}
+.mx-dialog-error .close:hover,
+.mx-dialog-error .close:focus {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: .5;
+  filter: alpha(opacity=50);
+}
+.mx-dialog-info .modal-content {
+  color: #3a87ad;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  padding: 15px 35px 15px 15px;
+  margin: 8px 0px 20px 0px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+.mx-dialog-info .modal-content h4 {
+  color: #3a87ad;
+}
+.mx-dialog-info .modal-header {
+  border: none;
+  background: none;
+}
 .mx-dialog-info .modal-footer {
   border: none;
   margin: 0px;
+  background: none;
+}
+.mx-dialog-info button.close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: inherit;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: .2;
+  filter: alpha(opacity=20);
+}
+.mx-dialog-info .close:hover,
+.mx-dialog-info .close:focus {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: .5;
+  filter: alpha(opacity=50);
 }
 .btn-group-justified a {
-  color: white;
+  color: #ffffff;
+}
+.section-preview {
+  padding: 4em 0 4em;
 }
 .section-preview .preview {
   margin-bottom: 4em;
@@ -6376,9 +6439,6 @@ legend {
 }
 .section-preview .preview .options p {
   margin-bottom: 2em;
-}
-.section-preview {
-  padding: 4em 0 4em;
 }
 .section-preview .mx-templategrid-item {
   border: none;
@@ -6400,34 +6460,118 @@ input[type="checkbox"] {
 .well {
   display: block;
 }
-.mx-list.pager > li:first-child,
-.mx-list.pagination > li:first-child,
-.mx-list.breadcrumb > li:first-child,
-.mx-list.nav-pills > li:first-child {
-  /* border-top-left-radius: 0px; */
-  /* border-top-right-radius: 0px; */
-}
-.mx-list.pager > li,
-.mx-list.pagination > li,
-.mx-list.breadcrumb > li,
-.mx-list.nav-pills > li {
-  border-style: none !important;
+.pagerdesign {
+  border-style: none;
   background-color: transparent;
-}
-.mx-list.pager > li,
-.mx-list.pagination > li,
-.mx-list.breadcrumb > li {
   padding: 0;
+  color: #333333;
 }
-.mx-list.pager > li:last-child,
-.mx-list.pagination > li:last-child,
-.mx-list.breadcrumb > li:last-child,
-.mx-list.nav-pills > li:last-child {
+.simplex .mx-list.pager > .active {
+  border: 0px;
+}
+.simplex .mx-list.pager > li {
+  border-style: none;
+  background-color: transparent;
+  padding: 0;
+  color: #333333;
+}
+.simplex .mx-list.pager > li:last-child {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border: none;
+}
+.simplex .mx-list.pager > li:hover {
+  background: none;
+  border: none;
+}
+.simplex .mx-list.pager > li:nth-child(2n+1):hover {
+  background: none;
+  border: none;
+}
+.simplex .mx-list.pager a {
+  color: #333333;
+}
+.simplex .mx-list.pagination .disabled > span,
+.simplex .mx-list.pagination > .disabled > span:hover,
+.simplex .mx-list.pagination > .disabled > span:focus,
+.simplex .mx-list.pagination > .disabled > a,
+.simplex .mx-list.pagination > .disabled > a:hover,
+.simplex .mx-list.pagination > .disabled > a:focus {
+  background-color: #ffffff;
+}
+.simplex .mx-list.pagination > li {
+  border-style: none;
+  background-color: transparent;
+  padding: 0;
+  color: #333333;
+}
+.simplex .mx-list.pagination > li:last-child {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-.mx-list.pagination li.active a {
-  color: #999999;
+.simplex .mx-list.pagination li.active a {
+  color: #ffffff;
+}
+.simplex .mx-list.pagination > .active {
+  border: 0px;
+}
+.simplex .mx-list.pagination > .active > a {
+  border-color: transparent;
+}
+.simplex .mx-list.pagination > .active > a:hover {
+  border-color: transparent;
+}
+.simplex .mx-list.pagination > .active > a:focus {
+  border-color: transparent;
+}
+.simplex .mx-list.pagination > .active > span {
+  border-color: transparent;
+}
+.simplex .mx-list.pagination > .active > span:hover {
+  border-color: transparent;
+}
+.simplex .mx-list.pagination > .active > span:focus {
+  border-color: transparent;
+}
+.simplex .mx-list.pagination a {
+  color: #333333;
+}
+.simplex .mx-list.breadcrumb > .active {
+  border: 0px;
+}
+.simplex .mx-list.breadcrumb > li {
+  border-style: none;
+  background-color: transparent;
+  padding: 0;
+  color: #333333;
+}
+.simplex .mx-list.breadcrumb > li:last-child {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.simplex .mx-list.breadcrumb > li:hover {
+  background: none;
+  border: none;
+}
+.simplex .mx-list.breadcrumb > li:nth-child(2n+1):hover {
+  background: none;
+  border: none;
+}
+.simplex .mx-list.breadcrumb a {
+  color: #cccccc;
+}
+.simplex .mx-list.nav-pills > li {
+  border-style: none;
+  background-color: transparent;
+  padding: 0;
+  color: #333333;
+}
+.simplex .mx-list.nav-pills > li:last-child {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.simplex .mx-list.nav-pills a {
+  color: #333333;
 }
 .leftFixed .mx-layoutcontainer-wrapper {
   position: fixed;
@@ -6441,52 +6585,26 @@ input[type="checkbox"] {
   margin: 0px;
   -webkit-box-shadow: none;
   box-shadow: none;
-}
-.leftFixed .mx-layoutcontainer-wrapper {
-  position: fixed;
-  width: 10%;
-}
-.bootswatchHeader .mx-layoutcontainer-wrapper {
-  padding: 0px;
-}
-.bootswatchHeader .navbar-default {
-  border: none;
-  margin: 0px;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.pagination > .active > a,
-.pagination > .active > span,
-.pagination > .active > a:hover,
-.pagination > .active > span:hover,
-.pagination > .active > a:focus,
-.pagination > .active > span:focus {
-  border-color: #ddd;
 }
 /* Calendar
 ========================================================================== */
 .dijitCalendarContainer {
-  background-color: #eff0f2;
+  background-color: #d9230f;
+  z-index: 99 !important;
 }
 .dijitCalendarContainer tr th,
 .dijitCalendarContainer tr td {
   padding: 6px;
   text-align: center;
+  color: #ffffff;
 }
 .dijitCalendarContainer tr th {
   text-align: center;
-  color: #FFF;
-  background-image: -webkit-linear-gradient(#6d7070, #474949 6%, #3d3f3f);
-  background-image: linear-gradient(#6d7070, #474949 6%, #3d3f3f);
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6d7070', endColorstr='#ff3d3f3f', GradientType=0);
-  filter: none;
+  color: #ffffff;
+  background-color: #469408;
 }
 .dijitCalendarContainer tr .dijitCalendarArrow {
   cursor: pointer;
-}
-.dijitCalendarMonthLabel {
-  font-weight: bold;
 }
 .dijitCalendarContainer .dijitCalendarMonthContainer th:first-child {
   border-top-left-radius: 3px;
@@ -6497,10 +6615,19 @@ input[type="checkbox"] {
 .dijitCalendarContainer .dijitButtonNode {
   border-style: none;
 }
+.dijitCalendarMonthLabel {
+  font-weight: bold;
+}
+.dijitCalendarMonthMenu .dijitCalendarMonthLabel {
+  color: #ffffff;
+}
+.dijitMenu.dijitCalendarMonthMenu {
+  background: #d9230f;
+}
 .dijitCalendarSelectedDate,
 .dijitCalendarSelectedDate:hover {
-  color: #FFF;
-  background: #3498DB;
+  color: #ffffff;
+  background: #3498db;
   border-radius: 10px;
 }
 .dijitCalendarHoveredDate,
@@ -6512,7 +6639,7 @@ input[type="checkbox"] {
 }
 .dijitCalendarYearContainer td {
   font-weight: bold;
-  border-top: 1px solid #dbdcdd;
+  border-top: 1px solid #0d747c;
   text-align: center;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
@@ -6521,29 +6648,28 @@ input[type="checkbox"] {
   z-index: 100;
 }
 .mobileHeader .mx-header {
-  background-color: #fff;
-  border-bottom: 1px solid #dfdfdf;
+  background: #ffffff;
 }
 .mobileHeader .mx-layoutcontainer-wrapper {
   padding: 0px;
 }
 .mobileHeader .mx-title {
   font-size: 30px;
-  color: #4582ec;
+  color: white;
 }
-.slidePanelRight {
-  background-color: #fff;
-  border-bottom: 1px solid #dfdfdf;
-  border-left: 1px solid #dfdfdf;
+.mobileHeader .slidePanelRight {
+  background-color: #d9230f;
+  border-left: 1px solid #d9230f;
+  border-bottom: 1px solid #d9230f;
+}
+.mobileHeader .glyphicon-align-justify {
+  color: #333333;
 }
 .profile-phone > mx-layoutcontainer-horizontal {
   min-height: 480px;
 }
-.mobileHeader .glyphicon .glyphicon-align-justify {
-  color: #333;
-}
 .slidePanelRight .mx-navigationtree a {
-  color: #333;
+  color: #fff;
 }
 .bs-glyphicons td {
   font-size: 24px;
@@ -6557,4 +6683,38 @@ input[type="checkbox"] {
   border-radius: 0px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
+}
+.rightside-menu .navbar-nav > li > a {
+  border: none;
+}
+.navbar-fixed-top {
+  color: #333333;
+}
+.navbar-fixed-top h4 {
+  color: #333333;
+}
+.navbar-fixed-top glyphicon-align-justify {
+  color: #333333;
+}
+.simplex .mx-window-active .mx-window-header {
+  background: transparent;
+}
+.simplex .mx-dataview-controls {
+  background: transparent;
+}
+.simplex .mx-datagrid-head-table {
+  background: transparent;
+}
+.simplex .mx-list > li:hover,
+.simplex .mx-list-striped > li:nth-child(2n+1):hover {
+  background: #f5f5f5;
+}
+.simplex .mx-list > li {
+  background: transparent;
+}
+.simplex .mx-list-striped > li:nth-child(2n+1) {
+  background: #f9f9f9;
+}
+.simplex .mx-datagrid .mx-datagrid-body-table .selected td {
+  background: #f9f9f9;
 }

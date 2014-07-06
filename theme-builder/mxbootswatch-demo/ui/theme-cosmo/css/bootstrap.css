@@ -6326,10 +6326,12 @@ table .info a,
 }
 .mx-dialog-warning .modal-header {
   border: none;
+  background: none;
 }
 .mx-dialog-warning .modal-footer {
   border: none;
   margin: 0px;
+  background: none;
 }
 .mx-dialog-warning button.close {
   float: right;
@@ -6364,10 +6366,12 @@ table .info a,
 }
 .mx-dialog-error .modal-header {
   border: none;
+  background: none;
 }
 .mx-dialog-error .modal-footer {
   border: none;
   margin: 0px;
+  background: none;
 }
 .mx-dialog-error button.close {
   float: right;
@@ -6402,10 +6406,12 @@ table .info a,
 }
 .mx-dialog-info .modal-header {
   border: none;
+  background: none;
 }
 .mx-dialog-info .modal-footer {
   border: none;
   margin: 0px;
+  background: none;
 }
 .mx-dialog-info button.close {
   float: right;
@@ -6471,72 +6477,114 @@ input[type="checkbox"] {
   border-style: none;
   background-color: transparent;
   padding: 0;
+  color: #007fff;
 }
-.mx-list.pager > .active {
+.cosmo .mx-list.pager > .active {
   border: 0px;
 }
-.mx-list.pager > li {
+.cosmo .mx-list.pager > li {
   border-style: none;
   background-color: transparent;
   padding: 0;
+  color: #007fff;
 }
-.mx-list.pager > li:last-child {
+.cosmo .mx-list.pager > li:last-child {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+  border: none;
 }
-.mx-list.pagination > li {
+.cosmo .mx-list.pager > li:hover {
+  background: none;
+  border: none;
+}
+.cosmo .mx-list.pager > li:nth-child(2n+1):hover {
+  background: none;
+  border: none;
+}
+.cosmo .mx-list.pager a {
+  color: #007fff;
+}
+.cosmo .mx-list.pagination .disabled > span,
+.cosmo .mx-list.pagination > .disabled > span:hover,
+.cosmo .mx-list.pagination > .disabled > span:focus,
+.cosmo .mx-list.pagination > .disabled > a,
+.cosmo .mx-list.pagination > .disabled > a:hover,
+.cosmo .mx-list.pagination > .disabled > a:focus {
+  background-color: #ffffff;
+}
+.cosmo .mx-list.pagination > li {
   border-style: none;
   background-color: transparent;
   padding: 0;
+  color: #007fff;
 }
-.mx-list.pagination > li:last-child {
+.cosmo .mx-list.pagination > li:last-child {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-.mx-list.pagination li.active a {
+.cosmo .mx-list.pagination li.active a {
   color: #999999;
 }
-.mx-list.pagination > .active {
+.cosmo .mx-list.pagination > .active {
   border: 0px;
 }
-.mx-list.pagination > .active > a {
-  border-color: #dddddd;
+.cosmo .mx-list.pagination > .active > a {
+  border-color: transparent;
 }
-.mx-list.pagination > .active > a:hover {
-  border-color: #dddddd;
+.cosmo .mx-list.pagination > .active > a:hover {
+  border-color: transparent;
 }
-.mx-list.pagination > .active > a:focus {
-  border-color: #dddddd;
+.cosmo .mx-list.pagination > .active > a:focus {
+  border-color: transparent;
 }
-.mx-list.pagination > .active > span {
-  border-color: #dddddd;
+.cosmo .mx-list.pagination > .active > span {
+  border-color: transparent;
 }
-.mx-list.pagination > .active > span:hover {
-  border-color: #dddddd;
+.cosmo .mx-list.pagination > .active > span:hover {
+  border-color: transparent;
 }
-.mx-list.pagination > .active > span:focus {
-  border-color: #dddddd;
+.cosmo .mx-list.pagination > .active > span:focus {
+  border-color: transparent;
 }
-.mx-list.breadcrumb > .active {
+.cosmo .mx-list.pagination a {
+  color: #007fff;
+}
+.cosmo .mx-list.breadcrumb > .active {
   border: 0px;
 }
-.mx-list.breadcrumb > li {
+.cosmo .mx-list.breadcrumb > li {
   border-style: none;
   background-color: transparent;
   padding: 0;
+  color: #007fff;
 }
-.mx-list.breadcrumb > li:last-child {
+.cosmo .mx-list.breadcrumb > li:last-child {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-.mx-list.nav-pills > li {
+.cosmo .mx-list.breadcrumb > li:hover {
+  background: none;
+  border: none;
+}
+.cosmo .mx-list.breadcrumb > li:nth-child(2n+1):hover {
+  background: none;
+  border: none;
+}
+.cosmo .mx-list.breadcrumb a {
+  color: #cccccc;
+}
+.cosmo .mx-list.nav-pills > li {
   border-style: none;
   background-color: transparent;
   padding: 0;
+  color: #007fff;
 }
-.mx-list.nav-pills > li:last-child {
+.cosmo .mx-list.nav-pills > li:last-child {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+}
+.cosmo .mx-list.nav-pills a {
+  color: #007fff;
 }
 .leftFixed .mx-layoutcontainer-wrapper {
   position: fixed;
@@ -6554,17 +6602,19 @@ input[type="checkbox"] {
 /* Calendar
 ========================================================================== */
 .dijitCalendarContainer {
-  background-color: #eff0f2;
+  background-color: #007fff;
+  z-index: 99 !important;
 }
 .dijitCalendarContainer tr th,
 .dijitCalendarContainer tr td {
   padding: 6px;
   text-align: center;
+  color: #ffffff;
 }
 .dijitCalendarContainer tr th {
   text-align: center;
   color: #ffffff;
-  background-color: #2fa4e7;
+  background-color: #3fb618;
 }
 .dijitCalendarContainer tr .dijitCalendarArrow {
   cursor: pointer;
@@ -6581,6 +6631,12 @@ input[type="checkbox"] {
 .dijitCalendarMonthLabel {
   font-weight: bold;
 }
+.dijitCalendarMonthMenu .dijitCalendarMonthLabel {
+  color: #ffffff;
+}
+.dijitMenu.dijitCalendarMonthMenu {
+  background: #007fff;
+}
 .dijitCalendarSelectedDate,
 .dijitCalendarSelectedDate:hover {
   color: #ffffff;
@@ -6596,7 +6652,7 @@ input[type="checkbox"] {
 }
 .dijitCalendarYearContainer td {
   font-weight: bold;
-  border-top: 1px solid #dbdcdd;
+  border-top: 1px solid #0d747c;
   text-align: center;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
@@ -6615,9 +6671,9 @@ input[type="checkbox"] {
   color: white;
 }
 .mobileHeader .slidePanelRight {
-  background-color: #222222;
-  border-left: 1px solid #121212;
-  border-bottom: 1px solid #121212;
+  background-color: #007fff;
+  border-left: 1px solid #007fff;
+  border-bottom: 1px solid #007fff;
 }
 .mobileHeader .glyphicon-align-justify {
   color: #ffffff;
@@ -6640,6 +6696,9 @@ input[type="checkbox"] {
   border-radius: 0px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
+}
+.rightside-menu .navbar-nav > li > a {
+  border: none;
 }
 .navbar-fixed-top {
   color: #ffffff;
@@ -6664,11 +6723,11 @@ input[type="checkbox"] {
   background: #f5f5f5;
 }
 .cosmo .mx-list > li {
-  background: #f5f5f5;
+  background: transparent;
 }
 .cosmo .mx-list-striped > li:nth-child(2n+1) {
   background: #f9f9f9;
 }
-.cosmo .mx-templategrid-item.selected {
-  background: #f5f5f5;
+.cosmo .mx-datagrid .mx-datagrid-body-table .selected td {
+  background: #f9f9f9;
 }

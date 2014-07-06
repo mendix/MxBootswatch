@@ -827,17 +827,6 @@
 @container-lg:                 @container-large-desktop;
 
 //Mendix custom themes
-@state-info-text:                @text-color;
-@state-info-bg:                  @gray-dark;
-@state-info-border:              darken(spin(@state-info-bg, -10), 7%);
-
-@state-warning-text:             @text-color;
-@state-warning-bg:               #FFFE84;
-@state-warning-border:           darken(spin(@state-warning-bg, -10), 5%);
-
-@state-danger-text:              @text-color;
-@state-danger-bg:                @gray;
-@state-danger-border:            darken(spin(@state-danger-bg, -10), 5%);
 
 @mx-dialog-close-btn-fontsize:21px;
 @mx-dialog-close-btn-fontweight:bold;
@@ -865,35 +854,36 @@
 @mx-dialog-info-border-color:@state-info-border;
 @mx-dialog-info-h4-color:@state-info-text;
 
-@btn-group-justified-color:#fff;
+@btn-group-justified-color:@btn-default-color;
 
-@pagination-border-color:#ddd;
+@pagination-border-color:transparent;
 
-@dijitCalendar-bg-color:#eff0f2;
+@dijitCalendar-bg-color:@brand-primary;
 @dijitCalendar-tr-color:#FFF;
-@dijitCalendar-tr-bgcolor:#2fa4e7;
+@dijitCalendar-tr-bgcolor:@brand-success;
 @dijitCalendarSelectedDate-color:#FFF;
 @dijitCalendarSelectedDate-bg-color:#3498DB;
 @dijitCalendarHoveredDate-color:#dbdcdd;
-@dijitCalendarYearContainer-border-top:1px solid #dbdcdd;
+@dijitCalendarYearContainer-border-top:1px solid #0d747c;
+@dijitCalendarMonthLabel-color:#fff;
+@dijitCalendarMonthMenu-bg:@brand-primary;
 
-@slidePanelRight-bg-color:#f0569f;
-@slidePanelRight-border-left:1px solid #f0569f;
+@slidePanelRight-bg-color:@brand-primary;
+@slidePanelRight-border-left:1px solid @brand-primary;
 @slidePanelRight-border-bottom:@slidePanelRight-border-left;
 
-@mobileHeader-glyhicon-color:white;
+@mobileHeader-glyhicon-color:@navbar-default-link-color;
 @mobileHeader-title: 30px;
 
-@mx-navbar-color:#fff;
+@mx-navbar-color:@navbar-default-link-color;
 @mx-dataview-controls:transparent;
 @mx-header-bg:transparent;
 @mx-datagrid-head-table-bg:transparent;
 
-@mx-templategrid-itemselected-bg:#f5f5f5;
-@mx-list-hover-bg: #f8b1cf;
-@mx-list-bg: #fce0ec;
-@mx-list-striped-bg:#fce0ec;
+@mx-templategrid-itemselected-bg:@table-bg-accent;
+@mx-list-hover-bg: @table-bg-hover;
+@mx-list-bg: @table-bg;
+@mx-list-striped-bg:@table-bg-accent;
 @theme-name:.cupid;
-@paging-color:#fff;
 
 

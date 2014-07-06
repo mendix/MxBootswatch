@@ -1,7 +1,7 @@
 Buildfile: \\psf\Home\Documents\GitHub\MxBootswatch\deployment\build_core.xml
 
 compile:
-    [javac] Compiling 28 source files to \\psf\Home\Documents\GitHub\MxBootswatch\deployment\run\bin
+    [javac] Compiling 2 source files to \\psf\Home\Documents\GitHub\MxBootswatch\deployment\run\bin
     [javac] Note: \\psf\Home\Documents\GitHub\MxBootswatch\javasource\com\mendix\core\Core.java uses unchecked or unsafe operations.
     [javac] Note: Recompile with -Xlint:unchecked for details.
 
@@ -11,10 +11,10 @@ build:
       [bnd]  Split package, multiple jars provide the same package:com/mendix/core
       [bnd] Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
       [bnd] Package found in   [Jar:mxruntime, Jar:run]
-      [bnd] Class path         [Jar:biz.aQute.bnd.annotation-2.1.0, Jar:org.scala-lang.scala-library-2.10.2, Jar:json, Jar:logging, Jar:m2ee-api, Jar:mxruntime, Jar:integration, Jar:osgi.cmpn-4.2.0, Jar:webui, Jar:javax.servlet-3.0.0, Jar:run]
+      [bnd] Class path         [Jar:biz.aQute.bnd.annotation, Jar:org.scala-lang.scala-library, Jar:json, Jar:logging, Jar:m2ee-api, Jar:mxruntime, Jar:integration, Jar:osgi.cmpn, Jar:webui, Jar:javax.servlet, Jar:run]
       [bnd] # project (project.jar) 50 
 
 BUILD SUCCESSFUL
-Total time: 4 seconds
+Total time: 3 seconds
 
 

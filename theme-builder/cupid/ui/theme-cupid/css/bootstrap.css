@@ -6631,6 +6631,7 @@ a.list-group-item:focus .list-group-item-heading {
 .mx-dialog-warning .modal-footer {
   border: none;
   margin: 0px;
+  background: none;
 }
 .mx-dialog-warning button.close {
   float: right;
@@ -6670,6 +6671,7 @@ a.list-group-item:focus .list-group-item-heading {
 .mx-dialog-error .modal-footer {
   border: none;
   margin: 0px;
+  background: none;
 }
 .mx-dialog-error button.close {
   float: right;
@@ -6709,6 +6711,7 @@ a.list-group-item:focus .list-group-item-heading {
 .mx-dialog-info .modal-footer {
   border: none;
   margin: 0px;
+  background: none;
 }
 .mx-dialog-info button.close {
   float: right;
@@ -6776,92 +6779,111 @@ input[type="checkbox"] {
   padding: 0;
   color: #ffffff;
 }
-.mx-list.pager > .active {
+.cupid .mx-list.pager > .active {
   border: 0px;
 }
-.mx-list.pager > li {
+.cupid .mx-list.pager > li {
   border-style: none;
   background-color: transparent;
   padding: 0;
   color: #ffffff;
 }
-.mx-list.pager > li:last-child {
+.cupid .mx-list.pager > li:last-child {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+  border: none;
 }
-.mx-list.pager > li:hover {
+.cupid .mx-list.pager > li:hover {
   background: none;
+  border: none;
 }
-.mx-list.pager > li:nth-child(2n+1):hover {
+.cupid .mx-list.pager > li:nth-child(2n+1):hover {
   background: none;
+  border: none;
 }
-.mx-list.pager a {
+.cupid .mx-list.pager a {
   color: #ffffff;
 }
-.mx-list.pagination > li {
+.cupid .mx-list.pagination .disabled > span,
+.cupid .mx-list.pagination > .disabled > span:hover,
+.cupid .mx-list.pagination > .disabled > span:focus,
+.cupid .mx-list.pagination > .disabled > a,
+.cupid .mx-list.pagination > .disabled > a:hover,
+.cupid .mx-list.pagination > .disabled > a:focus {
+  background-color: #f49ac0;
+}
+.cupid .mx-list.pagination > li {
   border-style: none;
   background-color: transparent;
   padding: 0;
   color: #ffffff;
 }
-.mx-list.pagination > li:last-child {
+.cupid .mx-list.pagination > li:last-child {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-.mx-list.pagination li.active a {
+.cupid .mx-list.pagination li.active a {
   color: #ffffff;
 }
-.mx-list.pagination > .active {
+.cupid .mx-list.pagination > .active {
   border: 0px;
 }
-.mx-list.pagination > .active > a {
-  border-color: #dddddd;
+.cupid .mx-list.pagination > .active > a {
+  border-color: transparent;
 }
-.mx-list.pagination > .active > a:hover {
-  border-color: #dddddd;
+.cupid .mx-list.pagination > .active > a:hover {
+  border-color: transparent;
 }
-.mx-list.pagination > .active > a:focus {
-  border-color: #dddddd;
+.cupid .mx-list.pagination > .active > a:focus {
+  border-color: transparent;
 }
-.mx-list.pagination > .active > span {
-  border-color: #dddddd;
+.cupid .mx-list.pagination > .active > span {
+  border-color: transparent;
 }
-.mx-list.pagination > .active > span:hover {
-  border-color: #dddddd;
+.cupid .mx-list.pagination > .active > span:hover {
+  border-color: transparent;
 }
-.mx-list.pagination > .active > span:focus {
-  border-color: #dddddd;
+.cupid .mx-list.pagination > .active > span:focus {
+  border-color: transparent;
 }
-.mx-list.pagination a {
+.cupid .mx-list.pagination a {
   color: #ffffff;
 }
-.mx-list.breadcrumb > .active {
+.cupid .mx-list.breadcrumb > .active {
   border: 0px;
 }
-.mx-list.breadcrumb > li {
+.cupid .mx-list.breadcrumb > li {
   border-style: none;
   background-color: transparent;
   padding: 0;
   color: #ffffff;
 }
-.mx-list.breadcrumb > li:last-child {
+.cupid .mx-list.breadcrumb > li:last-child {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-.mx-list.breadcrumb a {
-  color: #ffffff;
+.cupid .mx-list.breadcrumb > li:hover {
+  background: none;
+  border: none;
 }
-.mx-list.nav-pills > li {
+.cupid .mx-list.breadcrumb > li:nth-child(2n+1):hover {
+  background: none;
+  border: none;
+}
+.cupid .mx-list.breadcrumb a {
+  color: #f0569f;
+}
+.cupid .mx-list.nav-pills > li {
   border-style: none;
   background-color: transparent;
   padding: 0;
   color: #ffffff;
 }
-.mx-list.nav-pills > li:last-child {
+.cupid .mx-list.nav-pills > li:last-child {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-.mx-list.nav-pills a {
+.cupid .mx-list.nav-pills a {
   color: #ffffff;
 }
 .leftFixed .mx-layoutcontainer-wrapper {
@@ -6880,17 +6902,19 @@ input[type="checkbox"] {
 /* Calendar
 ========================================================================== */
 .dijitCalendarContainer {
-  background-color: #eff0f2;
+  background-color: #f0569f;
+  z-index: 99 !important;
 }
 .dijitCalendarContainer tr th,
 .dijitCalendarContainer tr td {
   padding: 6px;
   text-align: center;
+  color: #ffffff;
 }
 .dijitCalendarContainer tr th {
   text-align: center;
   color: #ffffff;
-  background-color: #2fa4e7;
+  background-color: #63b642;
 }
 .dijitCalendarContainer tr .dijitCalendarArrow {
   cursor: pointer;
@@ -6907,6 +6931,12 @@ input[type="checkbox"] {
 .dijitCalendarMonthLabel {
   font-weight: bold;
 }
+.dijitCalendarMonthMenu .dijitCalendarMonthLabel {
+  color: #ffffff;
+}
+.dijitMenu.dijitCalendarMonthMenu {
+  background: #f0569f;
+}
 .dijitCalendarSelectedDate,
 .dijitCalendarSelectedDate:hover {
   color: #ffffff;
@@ -6922,7 +6952,7 @@ input[type="checkbox"] {
 }
 .dijitCalendarYearContainer td {
   font-weight: bold;
-  border-top: 1px solid #dbdcdd;
+  border-top: 1px solid #0d747c;
   text-align: center;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
@@ -6967,6 +6997,9 @@ input[type="checkbox"] {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
 }
+.rightside-menu .navbar-nav > li > a {
+  border: none;
+}
 .navbar-fixed-top {
   color: #ffffff;
 }
@@ -6987,14 +7020,14 @@ input[type="checkbox"] {
 }
 .cupid .mx-list > li:hover,
 .cupid .mx-list-striped > li:nth-child(2n+1):hover {
-  background: #f8b1cf;
+  background: #fac9de;
 }
 .cupid .mx-list > li {
   background: #fce0ec;
 }
 .cupid .mx-list-striped > li:nth-child(2n+1) {
-  background: #fce0ec;
+  background: #fbd2e3;
 }
-.cupid .mx-templategrid-item.selected {
-  background: #f5f5f5;
+.cupid .mx-datagrid .mx-datagrid-body-table .selected td {
+  background: #fbd2e3;
 }

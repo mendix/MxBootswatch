@@ -97,7 +97,7 @@ module.exports = function (grunt) {
     grunt.config('copy.main.files',[{src:'<%=builddir%>/fonts/**', dest:'<%=builddir%>/' + theme + '/ui/theme-'+theme+'/'}]);
     grunt.task.run('copy');
 
-    grunt.config('compress.main.options.archive', '<%=builddir%>/zipped themes/'+theme+'.zip');
+    grunt.config('compress.main.options.archive', '../theme/'+theme+'.zip');
     grunt.config('compress.main.options.mode', 'zip');
     grunt.config('compress.main.files', [{src:['**'], cwd:'<%=builddir%>/' + theme, dest:'.',expand:true}]);
     grunt.task.run('compress');
@@ -136,7 +136,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('makemultizip','Make multi zip',function(){
 
-    grunt.config('compress.main.options.archive', '<%=builddir%>/zipped themes/bootswatch.zip');
+    grunt.config('compress.main.options.archive', '../theme/bootswatch.zip');
     grunt.config('compress.main.options.mode', 'zip');
     grunt.config('compress.main.files', [{src:['**'], cwd:'<%=builddir%>/mxbootswatch-demo', dest:'.',expand:true}]);
     grunt.task.run('compress');

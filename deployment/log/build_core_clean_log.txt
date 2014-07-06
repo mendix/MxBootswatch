@@ -1,8 +1,10 @@
 Buildfile: \\psf\Home\Documents\GitHub\MxBootswatch\deployment\build_core.xml
 
-
 clean:
+   [delete] Deleting directory \\psf\Home\Documents\GitHub\MxBootswatch\deployment\model
+   [delete] Deleting directory \\psf\Home\Documents\GitHub\MxBootswatch\deployment\run
 
 BUILD SUCCESSFUL
-Total time: 0 seconds
+Total time: 1 second
+
 
