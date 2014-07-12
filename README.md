@@ -16,7 +16,7 @@ You can of course use the complied themes without the theme builder, but the the
 
 To get started you will need to install Node.js. Node.js can be downloaded from [here](http://nodejs.org/) and you can install it on windows, mac or linux.
 
-<img src="images/nodejslogo.svg"/>
+<img src="images/nodejs_logo_light.png"/>
 
 Once Nodejs is installed open up in the node.js command prompt on windows or open up the terminal on mac.
 
