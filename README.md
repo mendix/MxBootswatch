@@ -32,14 +32,17 @@ In the terminal type the following command:
 
 The next thing you will to install is the less compiler.
 To do this type the following:
-npm install less
+`npm install less`
+
 <img src="images/install-less.PNG"/>
 <img src="images/installed-less.PNG"/>
 
 We now have all the necessary components installed to build your themes.
 
 We can now install our theme builder. Navigate to the theme-builder folder and type the command:
-npm install
+
+`npm install`
+
 <img src="images/install-theme-builder.PNG"/>
 
 
@@ -47,25 +50,20 @@ Customization
 ------
 MxBootswatch is open source and you’re welcome to modify the themes.
 
+Each theme is contained in its own theme folder inside the theme-builder folder.
+
 Each theme consists of two LESS files. `variables.less`, which is included by default in Bootstrap, allows you to customize [these settings](http://getbootstrap.com/customize/#less-variables). `bootswatch.less` introduces more extensive structural changes.
+
+To compile the themes into a Mendix zipped theme file you can type the following command:
+`grunt swatch : themename`
+
+If you want to compile all the themes you can type the command:
+`grunt swatch`
+
+When this command is run all themes will be compiled from LESS to CSS, placed in the correct folder structure, zipped up and placed in the Mendix theme folder. The file that performs these actions is called Gruntfile.js.
 
 Check out the [Help page](http://bootswatch.com/help/) for more details on building your own theme.
 
-API
------
-
-A simple API is available for integrating your platform with Mendix and Bootswatch.
-
-Included in this project is a Grunt.js file which enables you to easily combile your less files and create the appropriate zip files for you themes.
-
-To build a theme using grunt simply type:
-`grunt swatch : themename`
-
-Alternatively you can build all the themes using the command swatch.
-
-The swatch objects are returned in an array called `themes`, each one with the following properties:  `name`, `description`, `preview`, `thumbnail`, `css`, `cssMin`, `less`, and `lessVariables`.
-
-More info at http://bootswatch.com/help/#api
 
 Author
 ------
