@@ -18,12 +18,13 @@ To get started you will need to install Node.js. Node.js can be downloaded from 
 
 <img src="images/nodejs_logo_light.png"/>
 
-Once Nodejs is installed open up in the node.js command prompt on windows or open up the terminal on mac.
+Once node.js is installed open up in the node.js command prompt on windows or open up the terminal on mac.
 
-The first thing you will need to do is install Grunt. Grunt is a javascript task runner, which will allow you to build the correct zipped structure for your themes.
+The first thing you will need to do is install Grunt. Grunt is a javascript task runner, which will allow you to build the correct zipped file structure for your themes.
 
 In the terminal type the following command:
-npm install -g grunt-cli
+
+`npm install -g grunt-cli`
 
 <img src="images/install-grunt-cli.PNG"/>
 
