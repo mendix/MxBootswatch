@@ -8,6 +8,16 @@ Usage
 Download the `bootstrap.min.css` file associated with a theme and replace Bootstrap's default stylesheet.
 
 
+Installation
+-----
+To use the theme builder you must have a number of components installed before being able to use the builder.
+
+You can of course use the complied themes without the theme builder, but the theme builder gives you the flexibility of being able to change a couple of variables and build a new great looking theme.
+
+To get started you will need to install Node.js. Node.js can be downloaded from [here](http://nodejs.org/) and you can install it on windows, mac or linux.
+
+<img src="images/nodejslogo.svg"/>
+
 
 
 Customization
