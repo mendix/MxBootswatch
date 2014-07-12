@@ -57,6 +57,9 @@ Each theme consists of two LESS files. `variables.less`, which is included by de
 To compile the themes into a Mendix zipped theme file you can type the following command:
 `grunt swatch : themename`
 
+The following themes exist in this project:
+`amelia,cerulean, cupid, custom, cyborg, darkly,default, flatly, journal, lumen, readable, simplex, slate, spacelab, superhero, united & yeti`
+
 If you want to compile all the themes you can type the command:
 `grunt swatch`
 
@@ -87,6 +90,7 @@ Thanks
 Copyright and License
 ----
 Copyright 2014 Simon Black
+
 Copyright 2014 Thomas Park
 
 Code released under the MIT License.
