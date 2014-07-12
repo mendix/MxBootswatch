@@ -8,6 +8,7 @@
 /*.mpr.lock
 .mendix-cache
 proxies
+.project
 
 #mxgit-marker-start
 /.svn
