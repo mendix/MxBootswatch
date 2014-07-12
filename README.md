@@ -18,6 +18,28 @@ To get started you will need to install Node.js. Node.js can be downloaded from 
 
 <img src="images/nodejslogo.svg"/>
 
+Once Nodejs is installed open up in the node.js command prompt on windows or open up the terminal on mac.
+
+The first thing you will need to do is install Grunt. Grunt is a javascript task runner, which will allow you to build the correct zipped structure for your themes.
+
+In the terminal type the following command:
+npm install -g grunt-cli
+
+<img src="images/install-grunt-cli.PNG"/>
+
+<img src="images/installed-grunt-cli.PNG"/>
+
+The next thing you will to install is the less compiler.
+To do this type the following:
+npm install less
+<img src="images/install-less.PNG"/>
+<img src="images/installed-less.PNG"/>
+
+We now have all the necessary components installed to build your themes.
+
+We can now install our theme builder. Navigate to the theme-builder folder and type the command:
+npm install
+<img src="images/install-theme-builder.PNG"/>
 
 
 Customization
