@@ -1,7 +1,0 @@
-Private-Package: system, com.mendix.core, administration.proxies, administration.proxies.microflows, bootswatch.proxies, bootswatch.proxies.microflows, com.mendix.core, system, system.actions, system.proxies, system.proxies.microflows
-Import-Package: *;resolution:=optional
-Service-Component: *
-
-
-Bundle-Name: MxBootswatch
-Bundle-SymbolicName: project

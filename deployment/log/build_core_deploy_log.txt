@@ -1,9 +1,0 @@
-Buildfile: \\psf\Home\Documents\GitHub\MxBootswatch\deployment\build_core.xml
-
-deploy:
-    [unzip] Expanding: C:\Program Files (x86)\Mendix\5.6.0\modeler\deployment.mxz into \\psf\Home\Documents\GitHub\MxBootswatch\deployment
-
-BUILD SUCCESSFUL
-Total time: 0 seconds
-
-
