@@ -5,8 +5,9 @@ MxBootswatch is a collection of free themes for Mendix using the [Bootstrap](htt
 
 Usage
 -----
-Download the `bootstrap.min.css` file associated with a theme and replace Bootstrap's default stylesheet.
+MxBootswatch can be used in a number of ways to help speed up and improve styling in Mendix. You can use any of the zipped themes in the theme folder. Simply copy the theme into your theme folder for your application. Alternatively you can use the project package stored in the dist folder to preview the themes, see example styling and reuse layouts. All the source for the themes is stored in the theme-builder folder.
 
+Using the installation instructions bellow will allow you to build custom themes easyily using grunt and less.
 
 Installation
 -----
