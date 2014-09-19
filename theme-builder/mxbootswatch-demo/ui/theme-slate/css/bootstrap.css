@@ -7001,3 +7001,6 @@ input[type="checkbox"] {
 .slate .mx-datagrid .mx-datagrid-body-table .selected td {
   background: #353a41;
 }
+.slate .mx-list > li:last-child {
+  border-radius: 0px;
+}

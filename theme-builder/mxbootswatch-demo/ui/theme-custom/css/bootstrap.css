@@ -6607,3 +6607,6 @@ input[type="checkbox"] {
 .custom .mx-datagrid .mx-datagrid-body-table .selected td {
   background: #f9f9f9;
 }
+.custom .mx-list > li:last-child {
+  border-radius: 0px;
+}

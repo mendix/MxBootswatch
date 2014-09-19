@@ -6720,3 +6720,6 @@ input[type="checkbox"] {
 .cyborg .mx-datagrid .mx-datagrid-body-table .selected td {
   background: #080808;
 }
+.cyborg .mx-list > li:last-child {
+  border-radius: 0px;
+}

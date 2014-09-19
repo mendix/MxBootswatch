@@ -6724,3 +6724,6 @@ input[type="checkbox"] {
 .amelia .mx-datagrid .mx-datagrid-body-table .selected td {
   background: #0f7f88;
 }
+.amelia .mx-list > li:last-child {
+  border-radius: 0px;
+}

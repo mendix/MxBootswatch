@@ -6778,3 +6778,6 @@ input[type="checkbox"] {
 .spacelab .mx-datagrid .mx-datagrid-body-table .selected td {
   background: #f9f9f9;
 }
+.spacelab .mx-list > li:last-child {
+  border-radius: 0px;
+}

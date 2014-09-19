@@ -6675,3 +6675,6 @@ input[type="checkbox"] {
 .journal .mx-datagrid .mx-datagrid-body-table .selected td {
   background: #f9f9f9;
 }
+.journal .mx-list > li:last-child {
+  border-radius: 0px;
+}

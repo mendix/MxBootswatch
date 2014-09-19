@@ -6957,3 +6957,6 @@ input[type="checkbox"] {
 .lumen .mx-datagrid .mx-datagrid-body-table .selected td {
   background: #f9f9f9;
 }
+.lumen .mx-list > li:last-child {
+  border-radius: 0px;
+}

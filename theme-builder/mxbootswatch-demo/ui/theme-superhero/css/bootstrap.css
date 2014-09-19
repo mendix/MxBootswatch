@@ -6802,3 +6802,6 @@ input[type="checkbox"] {
 .superhero .mx-datagrid .mx-datagrid-body-table .selected td {
   background: #4e5d6c;
 }
+.superhero .mx-list > li:last-child {
+  border-radius: 0px;
+}

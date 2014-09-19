@@ -6728,6 +6728,9 @@ input[type="checkbox"] {
 .readable .mx-datagrid .mx-datagrid-body-table .selected td {
   background: #f9f9f9;
 }
+.readable .mx-list > li:last-child {
+  border-radius: 0px;
+}
 .buttonClose {
   float: right;
   font-size: 21px;

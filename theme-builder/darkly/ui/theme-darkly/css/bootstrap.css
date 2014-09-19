@@ -6829,3 +6829,6 @@ input[type="checkbox"] {
 .darkly .mx-datagrid .mx-datagrid-body-table .selected td {
   background: #303030;
 }
+.darkly .mx-list > li:last-child {
+  border-radius: 0px;
+}
