@@ -59,7 +59,7 @@ To compile the themes into a Mendix zipped theme file you can type the following
 `grunt swatch : themename`
 
 The following themes exist in this project:
-`amelia,cerulean, cupid, custom, cyborg, darkly,default, flatly, journal, lumen, readable, simplex, slate, spacelab, superhero, united & yeti`
+`amelia,cerulean, cupid, custom, cyborg, darkly,default, flatly, journal, lumen, paper, readable, sandstone, simplex, slate, spacelab, superhero, united & yeti`
 
 If you want to compile all the themes you can type the command:
 `grunt swatch`
