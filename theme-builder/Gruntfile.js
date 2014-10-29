@@ -100,6 +100,11 @@ module.exports = function (grunt) {
       
     grunt.config('copy.main.files',[{src:'<%=builddir%>/global/mendix/mendix-custom.css', dest:'<%=builddir%>/' + theme + '/ui/theme-'+theme+'/css/mendix-custom.css'}]);
     grunt.task.run('copy');
+      
+        grunt.config('copy.main',{src:'<%=builddir%>/global/mendix/components.json', dest:'<%=builddir%>/' + theme + '/components.json',options:{process: function (content, srcpath) {
+        return content.replace(/theme-name/g,"theme-"+theme);
+    }}});
+    grunt.task.run('copy');  
 
     grunt.config('compress.main.options.archive', '../theme/'+theme+'.zip');
     grunt.config('compress.main.options.mode', 'zip');

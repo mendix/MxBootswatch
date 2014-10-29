@@ -1,0 +1,10 @@
+{
+    "files": {
+        "css": [
+            "ui/theme-sandstone/css/bootstrap.min.css",
+            "ui/theme-sandstone/css/mendix-custom.css",
+            "mxclientsystem/mxui/ui/mxui.css"
+        ],
+        "js": [ "mxclientsystem/mxui/mxui.js" ]
+    }
+}

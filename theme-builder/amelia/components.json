@@ -1,0 +1,10 @@
+{
+    "files": {
+        "css": [
+            "ui/theme-amelia/css/bootstrap.min.css",
+            "ui/theme-amelia/css/mendix-custom.css",
+            "mxclientsystem/mxui/ui/mxui.css"
+        ],
+        "js": [ "mxclientsystem/mxui/mxui.js" ]
+    }
+}
