@@ -6674,7 +6674,6 @@ input[type="checkbox"] {
 ========================================================================== */
 .dijitCalendarContainer {
   background-color: #df691a;
-  z-index: 99 !important;
 }
 .dijitCalendarContainer tr th,
 .dijitCalendarContainer tr td {
@@ -6729,7 +6728,7 @@ input[type="checkbox"] {
   border-bottom-left-radius: 3px;
 }
 .navbar-fixed-top {
-  z-index: 100;
+  z-index: 1001;
 }
 .mobileHeader .mx-header {
   background: #4e5d6c;

@@ -93,8 +93,12 @@ module.exports = function (grunt) {
 
     grunt.task.run(['concat', 'less:dist', 'clean:build',
       compress ? 'compressLess:'+lessDest+':'+'<%=builddir%>/' + theme + '/ui/theme-'+theme+'/css/bootstrap.min.css':'none']);
-
+      
+  
     grunt.config('copy.main.files',[{src:'<%=builddir%>/fonts/**', dest:'<%=builddir%>/' + theme + '/ui/theme-'+theme+'/'}]);
+    grunt.task.run('copy');
+      
+    grunt.config('copy.main.files',[{src:'<%=builddir%>/global/mendix/mendix-custom.css', dest:'<%=builddir%>/' + theme + '/ui/theme-'+theme+'/css/mendix-custom.css'}]);
     grunt.task.run('copy');
 
     grunt.config('compress.main.options.archive', '../theme/'+theme+'.zip');
