@@ -5,6 +5,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-text-replace');
 
   // Project configuration.
   grunt.initConfig({
@@ -51,6 +52,18 @@ module.exports = function (grunt) {
       ]
     }
   },
+  replace: {
+    example: {
+        src: [],
+        dest: '',             
+        replacements: [{
+          from: '',                   
+          to: ''
+          }]
+    }
+    },
+
+
     less: {
       dist: {
         options: {
@@ -63,7 +76,6 @@ module.exports = function (grunt) {
   copy: {
   main: {
     files: [
-      {expand: true, src: ['path/**'], dest: 'dest/'}
     ]
   }
   }
@@ -93,19 +105,36 @@ module.exports = function (grunt) {
 
     grunt.task.run(['concat', 'less:dist', 'clean:build',
       compress ? 'compressLess:'+lessDest+':'+'<%=builddir%>/' + theme + '/ui/theme-'+theme+'/css/bootstrap.min.css':'none']);
-      
-  
-    grunt.config('copy.main.files',[{src:'<%=builddir%>/fonts/**', dest:'<%=builddir%>/' + theme + '/ui/theme-'+theme+'/'}]);
-    grunt.task.run('copy');
-      
-    grunt.config('copy.main.files',[{src:'<%=builddir%>/global/mendix/mendix-custom.css', dest:'<%=builddir%>/' + theme + '/ui/theme-'+theme+'/css/mendix-custom.css'}]);
-    grunt.task.run('copy');
-      
-        grunt.config('copy.main',{src:'<%=builddir%>/global/mendix/components.json', dest:'<%=builddir%>/' + theme + '/components.json',options:{process: function (content, srcpath) {
-        return content.replace(/theme-name/g,"theme-"+theme);
-    }}});
-    grunt.task.run('copy');  
 
+    if(theme==='default'){
+    grunt.config('copy.main.files',[
+      {src:'<%=builddir%>/fonts/**', dest:'<%=builddir%>/' + theme + '/ui/theme-'+theme+'/'},
+      {src:'<%=builddir%>/global/mendix/mendix-custom.css', dest:'<%=builddir%>/' + theme + '/ui/theme-'+theme+'/css/mendix-custom.css'},
+      {src:['**'], cwd:'<%=builddir%>/'+theme+'/ui/', dest:'<%=builddir%>/mxbootswatch-demo/ui/', expand:true},
+      {src:'<%=builddir%>/'+theme+'/index.html', dest:'<%=builddir%>/mxbootswatch-demo/index.html',filter: 'isFile'},
+      {src:'<%=builddir%>/global/mendix/components.json', dest:'<%=builddir%>/' + theme + '/components.json'}
+      ]);
+    }else{
+      grunt.config('copy.main.files',[
+      {src:'<%=builddir%>/fonts/**', dest:'<%=builddir%>/' + theme + '/ui/theme-'+theme+'/'},
+      {src:'<%=builddir%>/global/mendix/mendix-custom.css', dest:'<%=builddir%>/' + theme + '/ui/theme-'+theme+'/css/mendix-custom.css'},
+      {src:['**'], cwd:'<%=builddir%>/'+theme+'/ui/', dest:'<%=builddir%>/mxbootswatch-demo/ui/', expand:true},
+      {src:'<%=builddir%>/'+theme+'/index.html', dest:'<%=builddir%>/mxbootswatch-demo/index-'+theme+'.html',filter: 'isFile'},
+      {src:'<%=builddir%>/global/mendix/components.json', dest:'<%=builddir%>/' + theme + '/components.json'}
+      ]);
+    }
+
+    grunt.task.run('copy');
+    grunt.config('replace',{example: {
+        src: ['<%=builddir%>/' + theme + '/components.json'],
+        dest: '<%=builddir%>/' + theme + '/components.json',             
+        replacements: [{
+          from: 'theme-name',                   
+          to: 'theme-'+theme
+          }]
+    }});
+    grunt.task.run('replace');
+      
     grunt.config('compress.main.options.archive', '../theme/'+theme+'.zip');
     grunt.config('compress.main.options.mode', 'zip');
     grunt.config('compress.main.files', [{src:['**'], cwd:'<%=builddir%>/' + theme, dest:'.',expand:true}]);
@@ -127,22 +156,6 @@ module.exports = function (grunt) {
       
     });
 
-
-  grunt.registerTask('makemultitheme', 'build a multi theme', function(theme) {
-  
-    if(theme==='default'){
-        grunt.config('copy.main.files',[{cwd:'<%=builddir%>/'+theme+'/ui/', src:['**'], dest:'<%=builddir%>/mxbootswatch-demo/ui/', expand:true},
-          {src:'<%=builddir%>/'+theme+'/index.html', dest:'<%=builddir%>/mxbootswatch-demo/index.html',filter: 'isFile'}]);
-        grunt.task.run('copy');
-    }else{
-          grunt.config('copy.main.files',[{cwd:'<%=builddir%>/'+theme+'/ui/', src:['**'], dest:'<%=builddir%>/mxbootswatch-demo/ui/', expand:true},
-        {src:'<%=builddir%>/'+theme+'/index.html', dest:'<%=builddir%>/mxbootswatch-demo/index-'+theme+'.html',filter: 'isFile'}]);
-        grunt.task.run('copy');
-    }
-         
-         
-  });  
-
   grunt.registerTask('makemultizip','Make multi zip',function(){
 
     grunt.config('compress.main.options.archive', '../theme/bootswatch.zip');
@@ -154,7 +167,6 @@ module.exports = function (grunt) {
   grunt.registerMultiTask('swatch', 'build a theme', function() {
     var t = this.target;
     grunt.task.run('build:'+t);
-    grunt.task.run('makemultitheme:'+t);
   });
 
   grunt.registerTask('default', 'build a theme', function() {
