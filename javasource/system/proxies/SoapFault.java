@@ -29,7 +29,10 @@ public class SoapFault extends system.proxies.Error
 		Reason("Reason"),
 		Node("Node"),
 		Role("Role"),
-		Detail("Detail");
+		Detail("Detail"),
+		ErrorType("ErrorType"),
+		Message("Message"),
+		Stacktrace("Stacktrace");
 
 		private String metaName;
 

@@ -25,7 +25,12 @@ public class Image extends system.proxies.FileDocument
 	 */
 	public enum MemberNames
 	{
-		PublicThumbnailPath("PublicThumbnailPath");
+		PublicThumbnailPath("PublicThumbnailPath"),
+		FileID("FileID"),
+		Name("Name"),
+		DeleteAfterDownload("DeleteAfterDownload"),
+		Contents("Contents"),
+		HasContents("HasContents");
 
 		private String metaName;
 

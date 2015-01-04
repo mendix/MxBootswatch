@@ -28,7 +28,13 @@ public class Theme extends system.proxies.Image
 		PreviewUrl("PreviewUrl"),
 		ThemeName("ThemeName"),
 		TagLine("TagLine"),
-		DevicePreview("DevicePreview");
+		DevicePreview("DevicePreview"),
+		PublicThumbnailPath("PublicThumbnailPath"),
+		FileID("FileID"),
+		Name("Name"),
+		DeleteAfterDownload("DeleteAfterDownload"),
+		Contents("Contents"),
+		HasContents("HasContents");
 
 		private String metaName;
 

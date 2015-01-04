@@ -25,7 +25,18 @@ public class Account extends system.proxies.User
 	 */
 	public enum MemberNames
 	{
-		FullName("FullName");
+		FullName("FullName"),
+		Name("Name"),
+		Password("Password"),
+		LastLogin("LastLogin"),
+		Blocked("Blocked"),
+		Active("Active"),
+		FailedLogins("FailedLogins"),
+		WebServiceUser("WebServiceUser"),
+		IsAnonymous("IsAnonymous"),
+		UserRoles("System.UserRoles"),
+		User_Language("System.User_Language"),
+		User_TimeZone("System.User_TimeZone");
 
 		private String metaName;
 

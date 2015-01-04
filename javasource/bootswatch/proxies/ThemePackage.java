@@ -27,6 +27,11 @@ public class ThemePackage extends system.proxies.FileDocument
 	{
 		Minified("Minified"),
 		Defaulttheme("Defaulttheme"),
+		FileID("FileID"),
+		Name("Name"),
+		DeleteAfterDownload("DeleteAfterDownload"),
+		Contents("Contents"),
+		HasContents("HasContents"),
 		ThemePackage_Theme("Bootswatch.ThemePackage_Theme");
 
 		private String metaName;
