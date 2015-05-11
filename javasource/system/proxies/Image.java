@@ -59,16 +59,6 @@ public class Image extends system.proxies.FileDocument
 	}
 
 	/**
-	 * @deprecated Use 'new Image(Context)' instead. Note that the constructor will not insert the new object in the database.
-	 */
-	@Deprecated
-	public static system.proxies.Image create(IContext context) throws CoreException
-	{
-		IMendixObject mendixObject = Core.create(context, "System.Image");
-		return new system.proxies.Image(context, mendixObject);
-	}
-
-	/**
 	 * @deprecated Use 'Image.load(IContext, IMendixIdentifier)' instead.
 	 */
 	@Deprecated

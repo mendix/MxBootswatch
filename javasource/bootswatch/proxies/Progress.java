@@ -74,16 +74,6 @@ public class Progress
 	}
 
 	/**
-	 * @deprecated Use 'new Progress(Context)' instead. Note that the constructor will not insert the new object in the database.
-	 */
-	@Deprecated
-	public static bootswatch.proxies.Progress create(IContext context) throws CoreException
-	{
-		IMendixObject mendixObject = Core.create(context, "Bootswatch.Progress");
-		return new bootswatch.proxies.Progress(context, mendixObject);
-	}
-
-	/**
 	 * @deprecated Use 'Progress.load(IContext, IMendixIdentifier)' instead.
 	 */
 	@Deprecated

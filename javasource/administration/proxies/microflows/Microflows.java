@@ -14,7 +14,7 @@ import com.mendix.systemwideinterfaces.core.IMendixObject;
 
 public class Microflows
 {
-	// These are the Microflows for the Administration module
+	// These are the microflows for the Administration module
 
 	public static void changeMyPassword(IContext context, administration.proxies.AccountPasswordData _accountPasswordData)
 	{
@@ -76,6 +76,20 @@ public class Microflows
 		{
 			Map<String, Object> params = new HashMap<String, Object>();
 			Core.execute(context, "Administration.NewWebServiceAccount", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+
+	public static void onFirstLoginAppCloudUser(IContext context, String _userIdentity)
+	{
+		try
+		{
+			Map<String, Object> params = new HashMap<String, Object>();
+			params.put("UserIdentity", _userIdentity);
+			Core.execute(context, "Administration.OnFirstLoginAppCloudUser", params);
 		}
 		catch (CoreException e)
 		{

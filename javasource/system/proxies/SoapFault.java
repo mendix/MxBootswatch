@@ -61,16 +61,6 @@ public class SoapFault extends system.proxies.Error
 	}
 
 	/**
-	 * @deprecated Use 'new SoapFault(Context)' instead. Note that the constructor will not insert the new object in the database.
-	 */
-	@Deprecated
-	public static system.proxies.SoapFault create(IContext context) throws CoreException
-	{
-		IMendixObject mendixObject = Core.create(context, "System.SoapFault");
-		return new system.proxies.SoapFault(context, mendixObject);
-	}
-
-	/**
 	 * @deprecated Use 'SoapFault.load(IContext, IMendixIdentifier)' instead.
 	 */
 	@Deprecated

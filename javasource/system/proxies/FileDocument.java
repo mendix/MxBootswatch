@@ -67,16 +67,6 @@ public class FileDocument
 	}
 
 	/**
-	 * @deprecated Use 'new FileDocument(Context)' instead. Note that the constructor will not insert the new object in the database.
-	 */
-	@Deprecated
-	public static system.proxies.FileDocument create(IContext context) throws CoreException
-	{
-		IMendixObject mendixObject = Core.create(context, "System.FileDocument");
-		return new system.proxies.FileDocument(context, mendixObject);
-	}
-
-	/**
 	 * @deprecated Use 'FileDocument.load(IContext, IMendixIdentifier)' instead.
 	 */
 	@Deprecated

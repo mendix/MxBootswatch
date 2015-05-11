@@ -63,16 +63,6 @@ public class Theme extends system.proxies.Image
 	}
 
 	/**
-	 * @deprecated Use 'new Theme(Context)' instead. Note that the constructor will not insert the new object in the database.
-	 */
-	@Deprecated
-	public static bootswatch.proxies.Theme create(IContext context) throws CoreException
-	{
-		IMendixObject mendixObject = Core.create(context, "Bootswatch.Theme");
-		return new bootswatch.proxies.Theme(context, mendixObject);
-	}
-
-	/**
 	 * @deprecated Use 'Theme.load(IContext, IMendixIdentifier)' instead.
 	 */
 	@Deprecated

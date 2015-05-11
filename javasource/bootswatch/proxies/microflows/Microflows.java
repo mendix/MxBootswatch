@@ -14,7 +14,7 @@ import com.mendix.systemwideinterfaces.core.IMendixObject;
 
 public class Microflows
 {
-	// These are the Microflows for the Bootswatch module
+	// These are the microflows for the Bootswatch module
 
 	public static String cAL_DeviceURL(IContext context, bootswatch.proxies.Theme _theme)
 	{

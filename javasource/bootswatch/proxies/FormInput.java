@@ -80,16 +80,6 @@ public class FormInput
 	}
 
 	/**
-	 * @deprecated Use 'new FormInput(Context)' instead. Note that the constructor will not insert the new object in the database.
-	 */
-	@Deprecated
-	public static bootswatch.proxies.FormInput create(IContext context) throws CoreException
-	{
-		IMendixObject mendixObject = Core.create(context, "Bootswatch.FormInput");
-		return new bootswatch.proxies.FormInput(context, mendixObject);
-	}
-
-	/**
 	 * @deprecated Use 'FormInput.load(IContext, IMendixIdentifier)' instead.
 	 */
 	@Deprecated

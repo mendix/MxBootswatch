@@ -61,16 +61,6 @@ public class ThemePackage extends system.proxies.FileDocument
 	}
 
 	/**
-	 * @deprecated Use 'new ThemePackage(Context)' instead. Note that the constructor will not insert the new object in the database.
-	 */
-	@Deprecated
-	public static bootswatch.proxies.ThemePackage create(IContext context) throws CoreException
-	{
-		IMendixObject mendixObject = Core.create(context, "Bootswatch.ThemePackage");
-		return new bootswatch.proxies.ThemePackage(context, mendixObject);
-	}
-
-	/**
 	 * @deprecated Use 'ThemePackage.load(IContext, IMendixIdentifier)' instead.
 	 */
 	@Deprecated

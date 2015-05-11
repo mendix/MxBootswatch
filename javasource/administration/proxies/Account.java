@@ -26,6 +26,7 @@ public class Account extends system.proxies.User
 	public enum MemberNames
 	{
 		FullName("FullName"),
+		IsLocalUser("IsLocalUser"),
 		Name("Name"),
 		Password("Password"),
 		LastLogin("LastLogin"),
@@ -62,16 +63,6 @@ public class Account extends system.proxies.User
 		super(context, accountMendixObject);
 		if (!Core.isSubClassOf("Administration.Account", accountMendixObject.getType()))
 			throw new IllegalArgumentException("The given object is not a Administration.Account");
-	}
-
-	/**
-	 * @deprecated Use 'new Account(Context)' instead. Note that the constructor will not insert the new object in the database.
-	 */
-	@Deprecated
-	public static administration.proxies.Account create(IContext context) throws CoreException
-	{
-		IMendixObject mendixObject = Core.create(context, "Administration.Account");
-		return new administration.proxies.Account(context, mendixObject);
 	}
 
 	/**
@@ -140,6 +131,42 @@ public class Account extends system.proxies.User
 	public final void setFullName(IContext context, String fullname)
 	{
 		getMendixObject().setValue(context, MemberNames.FullName.toString(), fullname);
+	}
+
+	/**
+	 * @return value of IsLocalUser
+	 */
+	public final Boolean getIsLocalUser()
+	{
+		return getIsLocalUser(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of IsLocalUser
+	 */
+	public final Boolean getIsLocalUser(IContext context)
+	{
+		return (Boolean) getMendixObject().getValue(context, MemberNames.IsLocalUser.toString());
+	}
+
+	/**
+	 * Set value of IsLocalUser
+	 * @param islocaluser
+	 */
+	public final void setIsLocalUser(Boolean islocaluser)
+	{
+		setIsLocalUser(getContext(), islocaluser);
+	}
+
+	/**
+	 * Set value of IsLocalUser
+	 * @param context
+	 * @param islocaluser
+	 */
+	public final void setIsLocalUser(IContext context, Boolean islocaluser)
+	{
+		getMendixObject().setValue(context, MemberNames.IsLocalUser.toString(), islocaluser);
 	}
 
 	@Override
