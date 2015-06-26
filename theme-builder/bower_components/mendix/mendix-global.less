@@ -295,7 +295,7 @@ input[type="radio"], input[type="checkbox"] {
 ========================================================================== */
 .dijitCalendarContainer {
     background-color: @dijitCalendar-bg-color;
-    z-index: 98 !important;
+
     tr th,tr td {
         padding: 6px;
         text-align: center;
@@ -437,11 +437,49 @@ input[type="radio"], input[type="checkbox"] {
     background: @mx-list-striped-bg;
 }
 .mx-datagrid .mx-datagrid-body-table .selected td{
-    background:@mx-templategrid-itemselected-bg;
+    background:darken(@mx-templategrid-itemselected-bg,10%);
 }
 .mx-list > li:last-child{
     border-radius:0px;
 
 }
 
+}
+.navbar{
+    min-height: 0px;
+    .mx-layoutcontainer-wrapper{
+        padding: 0px;
+    }
+    .navbar{
+        margin: 0px;
+        border:none;
+        border-radius: 0px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    color: @navbar-default-link-color;
+    
+}
+.app-sidebar{
+    background: @navbar-default-bg;
+    .mx-layoutcontainer-wrapper{
+        padding:0px;
+    }
+    .navbar{
+        width:100%;
+        border: none;
+          -webkit-box-shadow: none;
+  box-shadow: none;
+        .nav{
+              margin: 0px;
+        }
+    }
+}
+.navbar-nav{
+    margin:0px;
+}
+.mx-layoutcontainer-middle{
+    .mx-layoutcontainer-wrapper.mx-layoutcontainer-nested{
+        overflow: hidden;
+    }
 }

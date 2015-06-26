@@ -2,7 +2,7 @@
 /*!
  * Bootswatch v3.2.0
  * Homepage: http://bootswatch.com
- * Copyright 2012-2014 Thomas Park
+ * Copyright 2012-2015 Thomas Park
  * Licensed under MIT
  * Based on Bootstrap
 */
@@ -6592,7 +6592,6 @@ input[type="checkbox"] {
 ========================================================================== */
 .dijitCalendarContainer {
   background-color: #2a9fd6;
-  z-index: 98 !important;
 }
 .dijitCalendarContainer tr th,
 .dijitCalendarContainer tr td {
@@ -6718,8 +6717,43 @@ input[type="checkbox"] {
   background: #080808;
 }
 .cyborg .mx-datagrid .mx-datagrid-body-table .selected td {
-  background: #080808;
+  background: #000000;
 }
 .cyborg .mx-list > li:last-child {
   border-radius: 0px;
+}
+.navbar {
+  min-height: 0px;
+  color: #888888;
+}
+.navbar .mx-layoutcontainer-wrapper {
+  padding: 0px;
+}
+.navbar .navbar {
+  margin: 0px;
+  border: none;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.app-sidebar {
+  background: #060606;
+}
+.app-sidebar .mx-layoutcontainer-wrapper {
+  padding: 0px;
+}
+.app-sidebar .navbar {
+  width: 100%;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.app-sidebar .navbar .nav {
+  margin: 0px;
+}
+.navbar-nav {
+  margin: 0px;
+}
+.mx-layoutcontainer-middle .mx-layoutcontainer-wrapper.mx-layoutcontainer-nested {
+  overflow: hidden;
 }
