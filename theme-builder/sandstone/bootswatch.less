@@ -1,48 +1,72 @@
-// Sandstone 3.2.0
+// Readable 3.3.5
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Roboto:400,500");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
 
 // Navbar =====================================================================
 
-.sandstone {
-  font-size: 11px;
-  line-height: 22px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
 .navbar {
-  .nav > li > a {
-    .sandstone();
+  font-family: @headings-font-family;
+
+  &-nav,
+  &-form {
+    margin-left: 0;
+    margin-right: 0;
   }
 
-  &-form input,
-  &-form .form-control {
-    border: none;
+  &-nav > li > a {
+    @margin-vertical: ((@navbar-height - 2*@padding-base-vertical - @line-height-computed - 2px) / 2);
+    margin: @margin-vertical 6px;
+    padding: @padding-base-vertical @padding-base-horizontal;
+    border: 1px solid transparent;
+    border-radius: @border-radius-base;
+
+    &:hover {
+      border: 1px solid #ddd;
+    }
+  }
+
+  &-nav > .active > a,
+  &-nav > .active > a:hover {
+    border: 1px solid #ddd;
+  }
+
+  &-default .navbar-nav > .active > a:hover {
+    color: @navbar-default-link-hover-color;
+  }
+
+  &-inverse .navbar-nav > .active > a:hover {
+    color: @navbar-inverse-link-hover-color;
+  }
+
+  &-brand {
+    padding-top: ((@navbar-height - 2*@font-size-large) / 2);
+    padding-bottom: ((@navbar-height - 2*@font-size-large) / 2);
+    line-height: 1.9;
+  }
+}
+
+@media (min-width: @grid-float-breakpoint) {
+  .navbar {
+    .navbar-nav > li > a {
+      padding: @padding-base-vertical @padding-base-horizontal;
+    }
+  }
+}
+
+@media (max-width: @grid-float-breakpoint - 1) {
+  .navbar {
+    .navbar-nav > li > a {
+      margin: 0;
+    }
   }
 }
 
 // Buttons ====================================================================
 
 .btn {
-  border: none;
-  .sandstone();
-
-  &:hover {
-    border-color: transparent;
-  }
-
-  &-lg {
-    line-height: 26px;
-  }
-
-  &-default {
-    &:hover {
-      background-color: @navbar-default-link-active-bg;
-    }
-  }
+  font-family: @headings-font-family;
 }
 
 // Typography =================================================================
@@ -51,145 +75,108 @@
 
 // Forms ======================================================================
 
-input,
-.form-control {
-  .box-shadow(none);
-
-  &:focus {
-    border-color: @input-border;
-    .box-shadow(none);
-  }
+legend {
+  font-family: @headings-font-family;
 }
 
-.input-sm {
-  padding: 15px 10px;
+.input-group-addon {
+  font-family: @font-family-sans-serif;
 }
 
 // Navs =======================================================================
 
 .nav {
-  .sandstone();
-
   .open > a,
   .open > a:hover,
   .open > a:focus {
-    border-color: @gray-light;
-  }
-}
-
-.nav-tabs {
-
-  & > li > a {
-    background-color: @gray-lighter;
-    border-color: @nav-tabs-border-color;
-    color: @gray;
-  }
-
-  > li.disabled > a:hover {
-    background-color: @gray-lighter;
-  }
-}
-
-.nav-pills {
-  a {
-    color: @gray;
-  }
-
-  li > a {
-    border: 1px solid transparent;
-  }
-
-  li.active > a,
-  li > a:hover {
-    border-color: @gray-light;
-  }
-
-  li.disabled > a {
-    border-color: transparent;
-  }
-}
-
-.breadcrumb {
-  .sandstone();
-
-  border: 1px solid @gray-light;
-
-  a {
-    color: @gray;
+    border: 1px solid #ddd;
   }
 }
 
 .pagination {
-  .sandstone();
-}
 
-.pager {
-  .sandstone();
+  font-family: @headings-font-family;
 
-  li > a {
-    color: @gray;
+  &-lg > li > a,
+  &-lg > li > span {
+    padding: 14px 24px;
   }
 }
 
-.dropdown-menu {
-  & > li > a {
-    .sandstone();
+.pager {
+
+  font-family: @headings-font-family;
+
+  a {
+    color: @text-color;
+  }
+
+  a:hover {
+    border-color: transparent;
+    color: #fff;
+  }
+
+  .disabled a {
+    border-color: @pager-border;
   }
 }
 
 // Indicators =================================================================
 
-.alert {
+.close {
+  color: #fff;
+  text-decoration: none;
+  text-shadow: none;
+  opacity: 0.4;
 
-  a,
-  .alert-link {
+  &:hover,
+  &:focus {
     color: #fff;
+    opacity: 1;
   }
 }
 
-.tooltip {
-  .sandstone();
+.alert {
+  .alert-link {
+    color: @alert-success-text;
+    text-decoration: underline;
+  }
+}
+
+.label {
+  font-family: @headings-font-family;
+  font-weight: normal;
+
+  &-default {
+    border: 1px solid #ddd;
+    color: @text-color;
+  }
+
+}
+
+.badge {
+  padding: 1px 7px 5px;
+  vertical-align: 2px;
+  font-family: @headings-font-family;
+  font-weight: normal;
 }
 
 // Progress bars ==============================================================
 
-.progress {
-  border-radius: 10px;
-  background-color: @gray-light;
-  .box-shadow(none);
-
-  &-bar {
-    .box-shadow(none);
-  }
-}
-
 // Containers =================================================================
-
-.list-group {
-  &-item {
-    padding: 16px 24px;
-  }
-}
-
-.well {
-  .box-shadow(none);
-}
 
 .panel {
   .box-shadow(none);
 
-  &-heading,
-  &-title,
-  &-footer {
-    .sandstone();
-    color: #fff;
-  }
-
   &-default {
-    .panel-heading,
-    .panel-title,
-    .panel-footer {
-      color: @gray;
+    .close {
+      color: @text-color;
     }
+  }
+}
+
+.modal {
+  .close {
+    color: @text-color;
   }
 }
