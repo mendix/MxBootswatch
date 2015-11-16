@@ -4,25 +4,19 @@
 
 package bootswatch.proxies;
 
-import com.mendix.core.Core;
-import com.mendix.core.CoreException;
-import com.mendix.systemwideinterfaces.core.IContext;
-import com.mendix.systemwideinterfaces.core.IMendixIdentifier;
-import com.mendix.systemwideinterfaces.core.IMendixObject;
-
 /**
  * 
  */
 public class FormInput
 {
-	private final IMendixObject formInputMendixObject;
+	private final com.mendix.systemwideinterfaces.core.IMendixObject formInputMendixObject;
 
-	private final IContext context;
+	private final com.mendix.systemwideinterfaces.core.IContext context;
 
 	/**
 	 * Internal name of this entity
 	 */
-	public static final String entityName = "Bootswatch.FormInput";
+	public static final java.lang.String entityName = "Bootswatch.FormInput";
 
 	/**
 	 * Enum describing members of this entity
@@ -49,31 +43,31 @@ public class FormInput
 		PanelFooter("PanelFooter"),
 		Date("Date");
 
-		private String metaName;
+		private java.lang.String metaName;
 
-		MemberNames(String s)
+		MemberNames(java.lang.String s)
 		{
 			metaName = s;
 		}
 
 		@Override
-		public String toString()
+		public java.lang.String toString()
 		{
 			return metaName;
 		}
 	}
 
-	public FormInput(IContext context)
+	public FormInput(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		this(context, Core.instantiate(context, "Bootswatch.FormInput"));
+		this(context, com.mendix.core.Core.instantiate(context, "Bootswatch.FormInput"));
 	}
 
-	protected FormInput(IContext context, IMendixObject formInputMendixObject)
+	protected FormInput(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject formInputMendixObject)
 	{
 		if (formInputMendixObject == null)
-			throw new IllegalArgumentException("The given object cannot be null.");
-		if (!Core.isSubClassOf("Bootswatch.FormInput", formInputMendixObject.getType()))
-			throw new IllegalArgumentException("The given object is not a Bootswatch.FormInput");
+			throw new java.lang.IllegalArgumentException("The given object cannot be null.");
+		if (!com.mendix.core.Core.isSubClassOf("Bootswatch.FormInput", formInputMendixObject.getType()))
+			throw new java.lang.IllegalArgumentException("The given object is not a Bootswatch.FormInput");
 
 		this.formInputMendixObject = formInputMendixObject;
 		this.context = context;
@@ -83,7 +77,7 @@ public class FormInput
 	 * @deprecated Use 'FormInput.load(IContext, IMendixIdentifier)' instead.
 	 */
 	@Deprecated
-	public static bootswatch.proxies.FormInput initialize(IContext context, IMendixIdentifier mendixIdentifier) throws CoreException
+	public static bootswatch.proxies.FormInput initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixIdentifier mendixIdentifier) throws com.mendix.core.CoreException
 	{
 		return bootswatch.proxies.FormInput.load(context, mendixIdentifier);
 	}
@@ -92,31 +86,31 @@ public class FormInput
 	 * Initialize a proxy using context (recommended). This context will be used for security checking when the get- and set-methods without context parameters are called.
 	 * The get- and set-methods with context parameter should be used when for instance sudo access is necessary (IContext.getSudoContext() can be used to obtain sudo access).
 	 */
-	public static bootswatch.proxies.FormInput initialize(IContext context, IMendixObject mendixObject)
+	public static bootswatch.proxies.FormInput initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject mendixObject)
 	{
 		return new bootswatch.proxies.FormInput(context, mendixObject);
 	}
 
-	public static bootswatch.proxies.FormInput load(IContext context, IMendixIdentifier mendixIdentifier) throws CoreException
+	public static bootswatch.proxies.FormInput load(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixIdentifier mendixIdentifier) throws com.mendix.core.CoreException
 	{
-		IMendixObject mendixObject = Core.retrieveId(context, mendixIdentifier);
+		com.mendix.systemwideinterfaces.core.IMendixObject mendixObject = com.mendix.core.Core.retrieveId(context, mendixIdentifier);
 		return bootswatch.proxies.FormInput.initialize(context, mendixObject);
 	}
 
 	/**
 	 * Commit the changes made on this proxy object.
 	 */
-	public final void commit() throws CoreException
+	public final void commit() throws com.mendix.core.CoreException
 	{
-		Core.commit(context, getMendixObject());
+		com.mendix.core.Core.commit(context, getMendixObject());
 	}
 
 	/**
 	 * Commit the changes made on this proxy object using the specified context.
 	 */
-	public final void commit(IContext context) throws CoreException
+	public final void commit(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
 	{
-		Core.commit(context, getMendixObject());
+		com.mendix.core.Core.commit(context, getMendixObject());
 	}
 
 	/**
@@ -124,15 +118,15 @@ public class FormInput
 	 */
 	public final void delete()
 	{
-		Core.delete(context, getMendixObject());
+		com.mendix.core.Core.delete(context, getMendixObject());
 	}
 
 	/**
 	 * Delete the object using the specified context.
 	 */
-	public final void delete(IContext context)
+	public final void delete(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		Core.delete(context, getMendixObject());
+		com.mendix.core.Core.delete(context, getMendixObject());
 	}
 	/**
 	 * @return value of Email
@@ -146,7 +140,7 @@ public class FormInput
 	 * @param context
 	 * @return value of Email
 	 */
-	public final String getEmail(IContext context)
+	public final String getEmail(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (String) getMendixObject().getValue(context, MemberNames.Email.toString());
 	}
@@ -165,7 +159,7 @@ public class FormInput
 	 * @param context
 	 * @param email
 	 */
-	public final void setEmail(IContext context, String email)
+	public final void setEmail(com.mendix.systemwideinterfaces.core.IContext context, String email)
 	{
 		getMendixObject().setValue(context, MemberNames.Email.toString(), email);
 	}
@@ -182,7 +176,7 @@ public class FormInput
 	 * @param context
 	 * @return value of Password
 	 */
-	public final String getPassword(IContext context)
+	public final String getPassword(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (String) getMendixObject().getValue(context, MemberNames.Password.toString());
 	}
@@ -201,7 +195,7 @@ public class FormInput
 	 * @param context
 	 * @param password
 	 */
-	public final void setPassword(IContext context, String password)
+	public final void setPassword(com.mendix.systemwideinterfaces.core.IContext context, String password)
 	{
 		getMendixObject().setValue(context, MemberNames.Password.toString(), password);
 	}
@@ -218,7 +212,7 @@ public class FormInput
 	 * @param context
 	 * @return value of TextArea
 	 */
-	public final String getTextArea(IContext context)
+	public final String getTextArea(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (String) getMendixObject().getValue(context, MemberNames.TextArea.toString());
 	}
@@ -237,7 +231,7 @@ public class FormInput
 	 * @param context
 	 * @param textarea
 	 */
-	public final void setTextArea(IContext context, String textarea)
+	public final void setTextArea(com.mendix.systemwideinterfaces.core.IContext context, String textarea)
 	{
 		getMendixObject().setValue(context, MemberNames.TextArea.toString(), textarea);
 	}
@@ -255,13 +249,13 @@ public class FormInput
 	 * @param context
 	 * @return value of Radios
 	 */
-	public final bootswatch.proxies.Options getRadios(IContext context)
+	public final bootswatch.proxies.Options getRadios(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		Object obj = getMendixObject().getValue(context, MemberNames.Radios.toString());
 		if (obj == null)
 			return null;
 
-		return bootswatch.proxies.Options.valueOf((String) obj);
+		return bootswatch.proxies.Options.valueOf((java.lang.String) obj);
 	}
 
 	/**
@@ -278,7 +272,7 @@ public class FormInput
 	 * @param context
 	 * @param radios
 	 */
-	public final void setRadios(IContext context, bootswatch.proxies.Options radios)
+	public final void setRadios(com.mendix.systemwideinterfaces.core.IContext context, bootswatch.proxies.Options radios)
 	{
 		if (radios != null)
 			getMendixObject().setValue(context, MemberNames.Radios.toString(), radios.toString());
@@ -299,13 +293,13 @@ public class FormInput
 	 * @param context
 	 * @return value of Selects
 	 */
-	public final bootswatch.proxies.Selects getSelects(IContext context)
+	public final bootswatch.proxies.Selects getSelects(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		Object obj = getMendixObject().getValue(context, MemberNames.Selects.toString());
 		if (obj == null)
 			return null;
 
-		return bootswatch.proxies.Selects.valueOf((String) obj);
+		return bootswatch.proxies.Selects.valueOf((java.lang.String) obj);
 	}
 
 	/**
@@ -322,7 +316,7 @@ public class FormInput
 	 * @param context
 	 * @param selects
 	 */
-	public final void setSelects(IContext context, bootswatch.proxies.Selects selects)
+	public final void setSelects(com.mendix.systemwideinterfaces.core.IContext context, bootswatch.proxies.Selects selects)
 	{
 		if (selects != null)
 			getMendixObject().setValue(context, MemberNames.Selects.toString(), selects.toString());
@@ -342,7 +336,7 @@ public class FormInput
 	 * @param context
 	 * @return value of FocusedInput
 	 */
-	public final String getFocusedInput(IContext context)
+	public final String getFocusedInput(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (String) getMendixObject().getValue(context, MemberNames.FocusedInput.toString());
 	}
@@ -361,7 +355,7 @@ public class FormInput
 	 * @param context
 	 * @param focusedinput
 	 */
-	public final void setFocusedInput(IContext context, String focusedinput)
+	public final void setFocusedInput(com.mendix.systemwideinterfaces.core.IContext context, String focusedinput)
 	{
 		getMendixObject().setValue(context, MemberNames.FocusedInput.toString(), focusedinput);
 	}
@@ -378,7 +372,7 @@ public class FormInput
 	 * @param context
 	 * @return value of DisabledInput
 	 */
-	public final String getDisabledInput(IContext context)
+	public final String getDisabledInput(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (String) getMendixObject().getValue(context, MemberNames.DisabledInput.toString());
 	}
@@ -397,7 +391,7 @@ public class FormInput
 	 * @param context
 	 * @param disabledinput
 	 */
-	public final void setDisabledInput(IContext context, String disabledinput)
+	public final void setDisabledInput(com.mendix.systemwideinterfaces.core.IContext context, String disabledinput)
 	{
 		getMendixObject().setValue(context, MemberNames.DisabledInput.toString(), disabledinput);
 	}
@@ -414,7 +408,7 @@ public class FormInput
 	 * @param context
 	 * @return value of InputWarning
 	 */
-	public final String getInputWarning(IContext context)
+	public final String getInputWarning(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (String) getMendixObject().getValue(context, MemberNames.InputWarning.toString());
 	}
@@ -433,7 +427,7 @@ public class FormInput
 	 * @param context
 	 * @param inputwarning
 	 */
-	public final void setInputWarning(IContext context, String inputwarning)
+	public final void setInputWarning(com.mendix.systemwideinterfaces.core.IContext context, String inputwarning)
 	{
 		getMendixObject().setValue(context, MemberNames.InputWarning.toString(), inputwarning);
 	}
@@ -450,7 +444,7 @@ public class FormInput
 	 * @param context
 	 * @return value of InputError
 	 */
-	public final String getInputError(IContext context)
+	public final String getInputError(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (String) getMendixObject().getValue(context, MemberNames.InputError.toString());
 	}
@@ -469,7 +463,7 @@ public class FormInput
 	 * @param context
 	 * @param inputerror
 	 */
-	public final void setInputError(IContext context, String inputerror)
+	public final void setInputError(com.mendix.systemwideinterfaces.core.IContext context, String inputerror)
 	{
 		getMendixObject().setValue(context, MemberNames.InputError.toString(), inputerror);
 	}
@@ -486,7 +480,7 @@ public class FormInput
 	 * @param context
 	 * @return value of InputSuccess
 	 */
-	public final String getInputSuccess(IContext context)
+	public final String getInputSuccess(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (String) getMendixObject().getValue(context, MemberNames.InputSuccess.toString());
 	}
@@ -505,7 +499,7 @@ public class FormInput
 	 * @param context
 	 * @param inputsuccess
 	 */
-	public final void setInputSuccess(IContext context, String inputsuccess)
+	public final void setInputSuccess(com.mendix.systemwideinterfaces.core.IContext context, String inputsuccess)
 	{
 		getMendixObject().setValue(context, MemberNames.InputSuccess.toString(), inputsuccess);
 	}
@@ -522,7 +516,7 @@ public class FormInput
 	 * @param context
 	 * @return value of LargeInput
 	 */
-	public final String getLargeInput(IContext context)
+	public final String getLargeInput(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (String) getMendixObject().getValue(context, MemberNames.LargeInput.toString());
 	}
@@ -541,7 +535,7 @@ public class FormInput
 	 * @param context
 	 * @param largeinput
 	 */
-	public final void setLargeInput(IContext context, String largeinput)
+	public final void setLargeInput(com.mendix.systemwideinterfaces.core.IContext context, String largeinput)
 	{
 		getMendixObject().setValue(context, MemberNames.LargeInput.toString(), largeinput);
 	}
@@ -558,7 +552,7 @@ public class FormInput
 	 * @param context
 	 * @return value of DefaultInput
 	 */
-	public final String getDefaultInput(IContext context)
+	public final String getDefaultInput(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (String) getMendixObject().getValue(context, MemberNames.DefaultInput.toString());
 	}
@@ -577,7 +571,7 @@ public class FormInput
 	 * @param context
 	 * @param defaultinput
 	 */
-	public final void setDefaultInput(IContext context, String defaultinput)
+	public final void setDefaultInput(com.mendix.systemwideinterfaces.core.IContext context, String defaultinput)
 	{
 		getMendixObject().setValue(context, MemberNames.DefaultInput.toString(), defaultinput);
 	}
@@ -594,7 +588,7 @@ public class FormInput
 	 * @param context
 	 * @return value of SmallInput
 	 */
-	public final String getSmallInput(IContext context)
+	public final String getSmallInput(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (String) getMendixObject().getValue(context, MemberNames.SmallInput.toString());
 	}
@@ -613,7 +607,7 @@ public class FormInput
 	 * @param context
 	 * @param smallinput
 	 */
-	public final void setSmallInput(IContext context, String smallinput)
+	public final void setSmallInput(com.mendix.systemwideinterfaces.core.IContext context, String smallinput)
 	{
 		getMendixObject().setValue(context, MemberNames.SmallInput.toString(), smallinput);
 	}
@@ -630,7 +624,7 @@ public class FormInput
 	 * @param context
 	 * @return value of InputAddons
 	 */
-	public final String getInputAddons(IContext context)
+	public final String getInputAddons(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (String) getMendixObject().getValue(context, MemberNames.InputAddons.toString());
 	}
@@ -649,7 +643,7 @@ public class FormInput
 	 * @param context
 	 * @param inputaddons
 	 */
-	public final void setInputAddons(IContext context, String inputaddons)
+	public final void setInputAddons(com.mendix.systemwideinterfaces.core.IContext context, String inputaddons)
 	{
 		getMendixObject().setValue(context, MemberNames.InputAddons.toString(), inputaddons);
 	}
@@ -666,7 +660,7 @@ public class FormInput
 	 * @param context
 	 * @return value of Checkbox
 	 */
-	public final Boolean getCheckbox(IContext context)
+	public final Boolean getCheckbox(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (Boolean) getMendixObject().getValue(context, MemberNames.Checkbox.toString());
 	}
@@ -685,7 +679,7 @@ public class FormInput
 	 * @param context
 	 * @param checkbox
 	 */
-	public final void setCheckbox(IContext context, Boolean checkbox)
+	public final void setCheckbox(com.mendix.systemwideinterfaces.core.IContext context, Boolean checkbox)
 	{
 		getMendixObject().setValue(context, MemberNames.Checkbox.toString(), checkbox);
 	}
@@ -702,7 +696,7 @@ public class FormInput
 	 * @param context
 	 * @return value of PanelHeader
 	 */
-	public final String getPanelHeader(IContext context)
+	public final String getPanelHeader(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (String) getMendixObject().getValue(context, MemberNames.PanelHeader.toString());
 	}
@@ -721,7 +715,7 @@ public class FormInput
 	 * @param context
 	 * @param panelheader
 	 */
-	public final void setPanelHeader(IContext context, String panelheader)
+	public final void setPanelHeader(com.mendix.systemwideinterfaces.core.IContext context, String panelheader)
 	{
 		getMendixObject().setValue(context, MemberNames.PanelHeader.toString(), panelheader);
 	}
@@ -738,7 +732,7 @@ public class FormInput
 	 * @param context
 	 * @return value of PanelContent
 	 */
-	public final String getPanelContent(IContext context)
+	public final String getPanelContent(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (String) getMendixObject().getValue(context, MemberNames.PanelContent.toString());
 	}
@@ -757,7 +751,7 @@ public class FormInput
 	 * @param context
 	 * @param panelcontent
 	 */
-	public final void setPanelContent(IContext context, String panelcontent)
+	public final void setPanelContent(com.mendix.systemwideinterfaces.core.IContext context, String panelcontent)
 	{
 		getMendixObject().setValue(context, MemberNames.PanelContent.toString(), panelcontent);
 	}
@@ -774,7 +768,7 @@ public class FormInput
 	 * @param context
 	 * @return value of PanelFooter
 	 */
-	public final String getPanelFooter(IContext context)
+	public final String getPanelFooter(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (String) getMendixObject().getValue(context, MemberNames.PanelFooter.toString());
 	}
@@ -793,7 +787,7 @@ public class FormInput
 	 * @param context
 	 * @param panelfooter
 	 */
-	public final void setPanelFooter(IContext context, String panelfooter)
+	public final void setPanelFooter(com.mendix.systemwideinterfaces.core.IContext context, String panelfooter)
 	{
 		getMendixObject().setValue(context, MemberNames.PanelFooter.toString(), panelfooter);
 	}
@@ -810,7 +804,7 @@ public class FormInput
 	 * @param context
 	 * @return value of Date
 	 */
-	public final java.util.Date getDate(IContext context)
+	public final java.util.Date getDate(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (java.util.Date) getMendixObject().getValue(context, MemberNames.Date.toString());
 	}
@@ -829,7 +823,7 @@ public class FormInput
 	 * @param context
 	 * @param date
 	 */
-	public final void setDate(IContext context, java.util.Date date)
+	public final void setDate(com.mendix.systemwideinterfaces.core.IContext context, java.util.Date date)
 	{
 		getMendixObject().setValue(context, MemberNames.Date.toString(), date);
 	}
@@ -837,7 +831,7 @@ public class FormInput
 	/**
 	 * @return the IMendixObject instance of this proxy for use in the Core interface.
 	 */
-	public final IMendixObject getMendixObject()
+	public final com.mendix.systemwideinterfaces.core.IMendixObject getMendixObject()
 	{
 		return formInputMendixObject;
 	}
@@ -845,7 +839,7 @@ public class FormInput
 	/**
 	 * @return the IContext instance of this proxy, or null if no IContext instance was specified at initialization.
 	 */
-	public final IContext getContext()
+	public final com.mendix.systemwideinterfaces.core.IContext getContext()
 	{
 		return context;
 	}
@@ -873,7 +867,7 @@ public class FormInput
 	/**
 	 * @return String name of this class
 	 */
-	public static String getType()
+	public static java.lang.String getType()
 	{
 		return "Bootswatch.FormInput";
 	}
@@ -883,7 +877,7 @@ public class FormInput
 	 * @deprecated Use getMendixObject().getId().toLong() to get a unique identifier for this object.
 	 */
 	@Deprecated
-	public String getGUID()
+	public java.lang.String getGUID()
 	{
 		return "ID_" + getMendixObject().getId().toLong();
 	}

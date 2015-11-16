@@ -171,20 +171,39 @@ public final class Core
 	}
 	
 	/**
-	 * Execute the specified action (asynchronously)
+	 * Execute the specified action (asynchronously). Use only to call other Java actions (not microflows)!
+	 * When calling microflows use {@link #executeAsync(IContext, String, boolean, Map<String, Object>)}
+	 * with a named parameter map instead.
 	 * Result is given and/or exceptions are raised when calling Future.get().
 	 * When calling Future.get() the result of the action will return immediately if the execution is done, 
 	 * otherwise the call is blocking. Exceptions raised while executing the action will not be thrown until 
 	 * Future.get() is called.
 	 * @param context the context for this action.
 	 * @param actionName the name of a microflow or java action (format "ModuleName.ActionName").
-	 * @param params for microflows: add IMendixObject, IMendixIdentifier or primitive parameters.
-	 * 		         for Java actions: add any object parameters.
+	 * @param params ordered params for the Java action.
 	 * @return the Future object.
 	 */
 	public static <R> Future<R> executeAsync(IContext context, String actionName, Object ... params) throws CoreException
 	{
 		return component.core().executeAsync(context, actionName, params);
+	}
+
+   /**
+   * Execute the specified microflow (asynchronously).
+   *
+   * @param context              the context for this microflow.
+   * @param microflowName        the name of the microflow (format "ModuleName.ActionName").
+   * @param executeInTransaction defines whether the microflow should be executed in a transaction (enables rolling back changes when exceptions are raised).
+   * @param params               microflow parameters by name.
+   * @return return value of the specified microflow.
+   */
+	public static <R> Future<R> executeAsync(
+      IContext context,
+      String microflowName,
+      boolean executeInTransaction,
+      Map<String, Object> params) throws CoreException
+	{
+		return component.core().executeAsync(context, microflowName, -1, executeInTransaction, params);
 	}
 
 	/**

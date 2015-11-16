@@ -4,12 +4,6 @@
 
 package bootswatch.proxies;
 
-import com.mendix.core.Core;
-import com.mendix.core.CoreException;
-import com.mendix.systemwideinterfaces.core.IContext;
-import com.mendix.systemwideinterfaces.core.IMendixIdentifier;
-import com.mendix.systemwideinterfaces.core.IMendixObject;
-
 /**
  * 
  */
@@ -18,7 +12,7 @@ public class ThemePackage extends system.proxies.FileDocument
 	/**
 	 * Internal name of this entity
 	 */
-	public static final String entityName = "Bootswatch.ThemePackage";
+	public static final java.lang.String entityName = "Bootswatch.ThemePackage";
 
 	/**
 	 * Enum describing members of this entity
@@ -34,37 +28,37 @@ public class ThemePackage extends system.proxies.FileDocument
 		HasContents("HasContents"),
 		ThemePackage_Theme("Bootswatch.ThemePackage_Theme");
 
-		private String metaName;
+		private java.lang.String metaName;
 
-		MemberNames(String s)
+		MemberNames(java.lang.String s)
 		{
 			metaName = s;
 		}
 
 		@Override
-		public String toString()
+		public java.lang.String toString()
 		{
 			return metaName;
 		}
 	}
 
-	public ThemePackage(IContext context)
+	public ThemePackage(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		this(context, Core.instantiate(context, "Bootswatch.ThemePackage"));
+		this(context, com.mendix.core.Core.instantiate(context, "Bootswatch.ThemePackage"));
 	}
 
-	protected ThemePackage(IContext context, IMendixObject themePackageMendixObject)
+	protected ThemePackage(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject themePackageMendixObject)
 	{
 		super(context, themePackageMendixObject);
-		if (!Core.isSubClassOf("Bootswatch.ThemePackage", themePackageMendixObject.getType()))
-			throw new IllegalArgumentException("The given object is not a Bootswatch.ThemePackage");
+		if (!com.mendix.core.Core.isSubClassOf("Bootswatch.ThemePackage", themePackageMendixObject.getType()))
+			throw new java.lang.IllegalArgumentException("The given object is not a Bootswatch.ThemePackage");
 	}
 
 	/**
 	 * @deprecated Use 'ThemePackage.load(IContext, IMendixIdentifier)' instead.
 	 */
 	@Deprecated
-	public static bootswatch.proxies.ThemePackage initialize(IContext context, IMendixIdentifier mendixIdentifier) throws CoreException
+	public static bootswatch.proxies.ThemePackage initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixIdentifier mendixIdentifier) throws com.mendix.core.CoreException
 	{
 		return bootswatch.proxies.ThemePackage.load(context, mendixIdentifier);
 	}
@@ -73,21 +67,21 @@ public class ThemePackage extends system.proxies.FileDocument
 	 * Initialize a proxy using context (recommended). This context will be used for security checking when the get- and set-methods without context parameters are called.
 	 * The get- and set-methods with context parameter should be used when for instance sudo access is necessary (IContext.getSudoContext() can be used to obtain sudo access).
 	 */
-	public static bootswatch.proxies.ThemePackage initialize(IContext context, IMendixObject mendixObject)
+	public static bootswatch.proxies.ThemePackage initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject mendixObject)
 	{
 		return new bootswatch.proxies.ThemePackage(context, mendixObject);
 	}
 
-	public static bootswatch.proxies.ThemePackage load(IContext context, IMendixIdentifier mendixIdentifier) throws CoreException
+	public static bootswatch.proxies.ThemePackage load(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixIdentifier mendixIdentifier) throws com.mendix.core.CoreException
 	{
-		IMendixObject mendixObject = Core.retrieveId(context, mendixIdentifier);
+		com.mendix.systemwideinterfaces.core.IMendixObject mendixObject = com.mendix.core.Core.retrieveId(context, mendixIdentifier);
 		return bootswatch.proxies.ThemePackage.initialize(context, mendixObject);
 	}
 
-	public static java.util.List<bootswatch.proxies.ThemePackage> load(IContext context, String xpathConstraint) throws CoreException
+	public static java.util.List<bootswatch.proxies.ThemePackage> load(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String xpathConstraint) throws com.mendix.core.CoreException
 	{
 		java.util.List<bootswatch.proxies.ThemePackage> result = new java.util.ArrayList<bootswatch.proxies.ThemePackage>();
-		for (IMendixObject obj : Core.retrieveXPathQuery(context, "//Bootswatch.ThemePackage" + xpathConstraint))
+		for (com.mendix.systemwideinterfaces.core.IMendixObject obj : com.mendix.core.Core.retrieveXPathQuery(context, "//Bootswatch.ThemePackage" + xpathConstraint))
 			result.add(bootswatch.proxies.ThemePackage.initialize(context, obj));
 		return result;
 	}
@@ -104,7 +98,7 @@ public class ThemePackage extends system.proxies.FileDocument
 	 * @param context
 	 * @return value of Minified
 	 */
-	public final Boolean getMinified(IContext context)
+	public final Boolean getMinified(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (Boolean) getMendixObject().getValue(context, MemberNames.Minified.toString());
 	}
@@ -123,7 +117,7 @@ public class ThemePackage extends system.proxies.FileDocument
 	 * @param context
 	 * @param minified
 	 */
-	public final void setMinified(IContext context, Boolean minified)
+	public final void setMinified(com.mendix.systemwideinterfaces.core.IContext context, Boolean minified)
 	{
 		getMendixObject().setValue(context, MemberNames.Minified.toString(), minified);
 	}
@@ -140,7 +134,7 @@ public class ThemePackage extends system.proxies.FileDocument
 	 * @param context
 	 * @return value of Defaulttheme
 	 */
-	public final Boolean getDefaulttheme(IContext context)
+	public final Boolean getDefaulttheme(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (Boolean) getMendixObject().getValue(context, MemberNames.Defaulttheme.toString());
 	}
@@ -159,7 +153,7 @@ public class ThemePackage extends system.proxies.FileDocument
 	 * @param context
 	 * @param defaulttheme
 	 */
-	public final void setDefaulttheme(IContext context, Boolean defaulttheme)
+	public final void setDefaulttheme(com.mendix.systemwideinterfaces.core.IContext context, Boolean defaulttheme)
 	{
 		getMendixObject().setValue(context, MemberNames.Defaulttheme.toString(), defaulttheme);
 	}
@@ -167,7 +161,7 @@ public class ThemePackage extends system.proxies.FileDocument
 	/**
 	 * @return value of ThemePackage_Theme
 	 */
-	public final bootswatch.proxies.Theme getThemePackage_Theme() throws CoreException
+	public final bootswatch.proxies.Theme getThemePackage_Theme() throws com.mendix.core.CoreException
 	{
 		return getThemePackage_Theme(getContext());
 	}
@@ -176,10 +170,10 @@ public class ThemePackage extends system.proxies.FileDocument
 	 * @param context
 	 * @return value of ThemePackage_Theme
 	 */
-	public final bootswatch.proxies.Theme getThemePackage_Theme(IContext context) throws CoreException
+	public final bootswatch.proxies.Theme getThemePackage_Theme(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
 	{
 		bootswatch.proxies.Theme result = null;
-		IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.ThemePackage_Theme.toString());
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.ThemePackage_Theme.toString());
 		if (identifier != null)
 			result = bootswatch.proxies.Theme.load(context, identifier);
 		return result;
@@ -199,7 +193,7 @@ public class ThemePackage extends system.proxies.FileDocument
 	 * @param context
 	 * @param themepackage_theme
 	 */
-	public final void setThemePackage_Theme(IContext context, bootswatch.proxies.Theme themepackage_theme)
+	public final void setThemePackage_Theme(com.mendix.systemwideinterfaces.core.IContext context, bootswatch.proxies.Theme themepackage_theme)
 	{
 		if (themepackage_theme == null)
 			getMendixObject().setValue(context, MemberNames.ThemePackage_Theme.toString(), null);
@@ -230,7 +224,7 @@ public class ThemePackage extends system.proxies.FileDocument
 	/**
 	 * @return String name of this class
 	 */
-	public static String getType()
+	public static java.lang.String getType()
 	{
 		return "Bootswatch.ThemePackage";
 	}
@@ -241,7 +235,7 @@ public class ThemePackage extends system.proxies.FileDocument
 	 */
 	@Override
 	@Deprecated
-	public String getGUID()
+	public java.lang.String getGUID()
 	{
 		return "ID_" + getMendixObject().getId().toLong();
 	}

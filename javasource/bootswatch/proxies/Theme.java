@@ -4,12 +4,6 @@
 
 package bootswatch.proxies;
 
-import com.mendix.core.Core;
-import com.mendix.core.CoreException;
-import com.mendix.systemwideinterfaces.core.IContext;
-import com.mendix.systemwideinterfaces.core.IMendixIdentifier;
-import com.mendix.systemwideinterfaces.core.IMendixObject;
-
 /**
  * 
  */
@@ -18,7 +12,7 @@ public class Theme extends system.proxies.Image
 	/**
 	 * Internal name of this entity
 	 */
-	public static final String entityName = "Bootswatch.Theme";
+	public static final java.lang.String entityName = "Bootswatch.Theme";
 
 	/**
 	 * Enum describing members of this entity
@@ -29,6 +23,7 @@ public class Theme extends system.proxies.Image
 		ThemeName("ThemeName"),
 		TagLine("TagLine"),
 		DevicePreview("DevicePreview"),
+		EnumerationSearch("EnumerationSearch"),
 		PublicThumbnailPath("PublicThumbnailPath"),
 		FileID("FileID"),
 		Name("Name"),
@@ -36,37 +31,37 @@ public class Theme extends system.proxies.Image
 		Contents("Contents"),
 		HasContents("HasContents");
 
-		private String metaName;
+		private java.lang.String metaName;
 
-		MemberNames(String s)
+		MemberNames(java.lang.String s)
 		{
 			metaName = s;
 		}
 
 		@Override
-		public String toString()
+		public java.lang.String toString()
 		{
 			return metaName;
 		}
 	}
 
-	public Theme(IContext context)
+	public Theme(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		this(context, Core.instantiate(context, "Bootswatch.Theme"));
+		this(context, com.mendix.core.Core.instantiate(context, "Bootswatch.Theme"));
 	}
 
-	protected Theme(IContext context, IMendixObject themeMendixObject)
+	protected Theme(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject themeMendixObject)
 	{
 		super(context, themeMendixObject);
-		if (!Core.isSubClassOf("Bootswatch.Theme", themeMendixObject.getType()))
-			throw new IllegalArgumentException("The given object is not a Bootswatch.Theme");
+		if (!com.mendix.core.Core.isSubClassOf("Bootswatch.Theme", themeMendixObject.getType()))
+			throw new java.lang.IllegalArgumentException("The given object is not a Bootswatch.Theme");
 	}
 
 	/**
 	 * @deprecated Use 'Theme.load(IContext, IMendixIdentifier)' instead.
 	 */
 	@Deprecated
-	public static bootswatch.proxies.Theme initialize(IContext context, IMendixIdentifier mendixIdentifier) throws CoreException
+	public static bootswatch.proxies.Theme initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixIdentifier mendixIdentifier) throws com.mendix.core.CoreException
 	{
 		return bootswatch.proxies.Theme.load(context, mendixIdentifier);
 	}
@@ -75,21 +70,21 @@ public class Theme extends system.proxies.Image
 	 * Initialize a proxy using context (recommended). This context will be used for security checking when the get- and set-methods without context parameters are called.
 	 * The get- and set-methods with context parameter should be used when for instance sudo access is necessary (IContext.getSudoContext() can be used to obtain sudo access).
 	 */
-	public static bootswatch.proxies.Theme initialize(IContext context, IMendixObject mendixObject)
+	public static bootswatch.proxies.Theme initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject mendixObject)
 	{
 		return new bootswatch.proxies.Theme(context, mendixObject);
 	}
 
-	public static bootswatch.proxies.Theme load(IContext context, IMendixIdentifier mendixIdentifier) throws CoreException
+	public static bootswatch.proxies.Theme load(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixIdentifier mendixIdentifier) throws com.mendix.core.CoreException
 	{
-		IMendixObject mendixObject = Core.retrieveId(context, mendixIdentifier);
+		com.mendix.systemwideinterfaces.core.IMendixObject mendixObject = com.mendix.core.Core.retrieveId(context, mendixIdentifier);
 		return bootswatch.proxies.Theme.initialize(context, mendixObject);
 	}
 
-	public static java.util.List<bootswatch.proxies.Theme> load(IContext context, String xpathConstraint) throws CoreException
+	public static java.util.List<bootswatch.proxies.Theme> load(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String xpathConstraint) throws com.mendix.core.CoreException
 	{
 		java.util.List<bootswatch.proxies.Theme> result = new java.util.ArrayList<bootswatch.proxies.Theme>();
-		for (IMendixObject obj : Core.retrieveXPathQuery(context, "//Bootswatch.Theme" + xpathConstraint))
+		for (com.mendix.systemwideinterfaces.core.IMendixObject obj : com.mendix.core.Core.retrieveXPathQuery(context, "//Bootswatch.Theme" + xpathConstraint))
 			result.add(bootswatch.proxies.Theme.initialize(context, obj));
 		return result;
 	}
@@ -106,7 +101,7 @@ public class Theme extends system.proxies.Image
 	 * @param context
 	 * @return value of PreviewUrl
 	 */
-	public final String getPreviewUrl(IContext context)
+	public final String getPreviewUrl(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (String) getMendixObject().getValue(context, MemberNames.PreviewUrl.toString());
 	}
@@ -125,7 +120,7 @@ public class Theme extends system.proxies.Image
 	 * @param context
 	 * @param previewurl
 	 */
-	public final void setPreviewUrl(IContext context, String previewurl)
+	public final void setPreviewUrl(com.mendix.systemwideinterfaces.core.IContext context, String previewurl)
 	{
 		getMendixObject().setValue(context, MemberNames.PreviewUrl.toString(), previewurl);
 	}
@@ -142,7 +137,7 @@ public class Theme extends system.proxies.Image
 	 * @param context
 	 * @return value of ThemeName
 	 */
-	public final String getThemeName(IContext context)
+	public final String getThemeName(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (String) getMendixObject().getValue(context, MemberNames.ThemeName.toString());
 	}
@@ -161,7 +156,7 @@ public class Theme extends system.proxies.Image
 	 * @param context
 	 * @param themename
 	 */
-	public final void setThemeName(IContext context, String themename)
+	public final void setThemeName(com.mendix.systemwideinterfaces.core.IContext context, String themename)
 	{
 		getMendixObject().setValue(context, MemberNames.ThemeName.toString(), themename);
 	}
@@ -178,7 +173,7 @@ public class Theme extends system.proxies.Image
 	 * @param context
 	 * @return value of TagLine
 	 */
-	public final String getTagLine(IContext context)
+	public final String getTagLine(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (String) getMendixObject().getValue(context, MemberNames.TagLine.toString());
 	}
@@ -197,7 +192,7 @@ public class Theme extends system.proxies.Image
 	 * @param context
 	 * @param tagline
 	 */
-	public final void setTagLine(IContext context, String tagline)
+	public final void setTagLine(com.mendix.systemwideinterfaces.core.IContext context, String tagline)
 	{
 		getMendixObject().setValue(context, MemberNames.TagLine.toString(), tagline);
 	}
@@ -214,7 +209,7 @@ public class Theme extends system.proxies.Image
 	 * @param context
 	 * @return value of DevicePreview
 	 */
-	public final String getDevicePreview(IContext context)
+	public final String getDevicePreview(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (String) getMendixObject().getValue(context, MemberNames.DevicePreview.toString());
 	}
@@ -233,9 +228,53 @@ public class Theme extends system.proxies.Image
 	 * @param context
 	 * @param devicepreview
 	 */
-	public final void setDevicePreview(IContext context, String devicepreview)
+	public final void setDevicePreview(com.mendix.systemwideinterfaces.core.IContext context, String devicepreview)
 	{
 		getMendixObject().setValue(context, MemberNames.DevicePreview.toString(), devicepreview);
+	}
+
+	/**
+	 * Set value of EnumerationSearch
+	 * @param enumerationsearch
+	 */
+	public final bootswatch.proxies.Options getEnumerationSearch()
+	{
+		return getEnumerationSearch(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of EnumerationSearch
+	 */
+	public final bootswatch.proxies.Options getEnumerationSearch(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		Object obj = getMendixObject().getValue(context, MemberNames.EnumerationSearch.toString());
+		if (obj == null)
+			return null;
+
+		return bootswatch.proxies.Options.valueOf((java.lang.String) obj);
+	}
+
+	/**
+	 * Set value of EnumerationSearch
+	 * @param enumerationsearch
+	 */
+	public final void setEnumerationSearch(bootswatch.proxies.Options enumerationsearch)
+	{
+		setEnumerationSearch(getContext(), enumerationsearch);
+	}
+
+	/**
+	 * Set value of EnumerationSearch
+	 * @param context
+	 * @param enumerationsearch
+	 */
+	public final void setEnumerationSearch(com.mendix.systemwideinterfaces.core.IContext context, bootswatch.proxies.Options enumerationsearch)
+	{
+		if (enumerationsearch != null)
+			getMendixObject().setValue(context, MemberNames.EnumerationSearch.toString(), enumerationsearch.toString());
+		else
+			getMendixObject().setValue(context, MemberNames.EnumerationSearch.toString(), null);
 	}
 
 	@Override
@@ -261,7 +300,7 @@ public class Theme extends system.proxies.Image
 	/**
 	 * @return String name of this class
 	 */
-	public static String getType()
+	public static java.lang.String getType()
 	{
 		return "Bootswatch.Theme";
 	}
@@ -272,7 +311,7 @@ public class Theme extends system.proxies.Image
 	 */
 	@Override
 	@Deprecated
-	public String getGUID()
+	public java.lang.String getGUID()
 	{
 		return "ID_" + getMendixObject().getId().toLong();
 	}

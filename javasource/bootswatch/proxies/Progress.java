@@ -4,25 +4,19 @@
 
 package bootswatch.proxies;
 
-import com.mendix.core.Core;
-import com.mendix.core.CoreException;
-import com.mendix.systemwideinterfaces.core.IContext;
-import com.mendix.systemwideinterfaces.core.IMendixIdentifier;
-import com.mendix.systemwideinterfaces.core.IMendixObject;
-
 /**
  * 
  */
 public class Progress
 {
-	private final IMendixObject progressMendixObject;
+	private final com.mendix.systemwideinterfaces.core.IMendixObject progressMendixObject;
 
-	private final IContext context;
+	private final com.mendix.systemwideinterfaces.core.IContext context;
 
 	/**
 	 * Internal name of this entity
 	 */
-	public static final String entityName = "Bootswatch.Progress";
+	public static final java.lang.String entityName = "Bootswatch.Progress";
 
 	/**
 	 * Enum describing members of this entity
@@ -43,31 +37,31 @@ public class Progress
 		Stacked2("Stacked2"),
 		Stacked3("Stacked3");
 
-		private String metaName;
+		private java.lang.String metaName;
 
-		MemberNames(String s)
+		MemberNames(java.lang.String s)
 		{
 			metaName = s;
 		}
 
 		@Override
-		public String toString()
+		public java.lang.String toString()
 		{
 			return metaName;
 		}
 	}
 
-	public Progress(IContext context)
+	public Progress(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		this(context, Core.instantiate(context, "Bootswatch.Progress"));
+		this(context, com.mendix.core.Core.instantiate(context, "Bootswatch.Progress"));
 	}
 
-	protected Progress(IContext context, IMendixObject progressMendixObject)
+	protected Progress(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject progressMendixObject)
 	{
 		if (progressMendixObject == null)
-			throw new IllegalArgumentException("The given object cannot be null.");
-		if (!Core.isSubClassOf("Bootswatch.Progress", progressMendixObject.getType()))
-			throw new IllegalArgumentException("The given object is not a Bootswatch.Progress");
+			throw new java.lang.IllegalArgumentException("The given object cannot be null.");
+		if (!com.mendix.core.Core.isSubClassOf("Bootswatch.Progress", progressMendixObject.getType()))
+			throw new java.lang.IllegalArgumentException("The given object is not a Bootswatch.Progress");
 
 		this.progressMendixObject = progressMendixObject;
 		this.context = context;
@@ -77,7 +71,7 @@ public class Progress
 	 * @deprecated Use 'Progress.load(IContext, IMendixIdentifier)' instead.
 	 */
 	@Deprecated
-	public static bootswatch.proxies.Progress initialize(IContext context, IMendixIdentifier mendixIdentifier) throws CoreException
+	public static bootswatch.proxies.Progress initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixIdentifier mendixIdentifier) throws com.mendix.core.CoreException
 	{
 		return bootswatch.proxies.Progress.load(context, mendixIdentifier);
 	}
@@ -86,31 +80,31 @@ public class Progress
 	 * Initialize a proxy using context (recommended). This context will be used for security checking when the get- and set-methods without context parameters are called.
 	 * The get- and set-methods with context parameter should be used when for instance sudo access is necessary (IContext.getSudoContext() can be used to obtain sudo access).
 	 */
-	public static bootswatch.proxies.Progress initialize(IContext context, IMendixObject mendixObject)
+	public static bootswatch.proxies.Progress initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject mendixObject)
 	{
 		return new bootswatch.proxies.Progress(context, mendixObject);
 	}
 
-	public static bootswatch.proxies.Progress load(IContext context, IMendixIdentifier mendixIdentifier) throws CoreException
+	public static bootswatch.proxies.Progress load(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixIdentifier mendixIdentifier) throws com.mendix.core.CoreException
 	{
-		IMendixObject mendixObject = Core.retrieveId(context, mendixIdentifier);
+		com.mendix.systemwideinterfaces.core.IMendixObject mendixObject = com.mendix.core.Core.retrieveId(context, mendixIdentifier);
 		return bootswatch.proxies.Progress.initialize(context, mendixObject);
 	}
 
 	/**
 	 * Commit the changes made on this proxy object.
 	 */
-	public final void commit() throws CoreException
+	public final void commit() throws com.mendix.core.CoreException
 	{
-		Core.commit(context, getMendixObject());
+		com.mendix.core.Core.commit(context, getMendixObject());
 	}
 
 	/**
 	 * Commit the changes made on this proxy object using the specified context.
 	 */
-	public final void commit(IContext context) throws CoreException
+	public final void commit(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
 	{
-		Core.commit(context, getMendixObject());
+		com.mendix.core.Core.commit(context, getMendixObject());
 	}
 
 	/**
@@ -118,15 +112,15 @@ public class Progress
 	 */
 	public final void delete()
 	{
-		Core.delete(context, getMendixObject());
+		com.mendix.core.Core.delete(context, getMendixObject());
 	}
 
 	/**
 	 * Delete the object using the specified context.
 	 */
-	public final void delete(IContext context)
+	public final void delete(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		Core.delete(context, getMendixObject());
+		com.mendix.core.Core.delete(context, getMendixObject());
 	}
 	/**
 	 * @return value of BasicProgressBar
@@ -140,7 +134,7 @@ public class Progress
 	 * @param context
 	 * @return value of BasicProgressBar
 	 */
-	public final Integer getBasicProgressBar(IContext context)
+	public final Integer getBasicProgressBar(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (Integer) getMendixObject().getValue(context, MemberNames.BasicProgressBar.toString());
 	}
@@ -159,7 +153,7 @@ public class Progress
 	 * @param context
 	 * @param basicprogressbar
 	 */
-	public final void setBasicProgressBar(IContext context, Integer basicprogressbar)
+	public final void setBasicProgressBar(com.mendix.systemwideinterfaces.core.IContext context, Integer basicprogressbar)
 	{
 		getMendixObject().setValue(context, MemberNames.BasicProgressBar.toString(), basicprogressbar);
 	}
@@ -176,7 +170,7 @@ public class Progress
 	 * @param context
 	 * @return value of ContextualAlt1
 	 */
-	public final Integer getContextualAlt1(IContext context)
+	public final Integer getContextualAlt1(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (Integer) getMendixObject().getValue(context, MemberNames.ContextualAlt1.toString());
 	}
@@ -195,7 +189,7 @@ public class Progress
 	 * @param context
 	 * @param contextualalt1
 	 */
-	public final void setContextualAlt1(IContext context, Integer contextualalt1)
+	public final void setContextualAlt1(com.mendix.systemwideinterfaces.core.IContext context, Integer contextualalt1)
 	{
 		getMendixObject().setValue(context, MemberNames.ContextualAlt1.toString(), contextualalt1);
 	}
@@ -212,7 +206,7 @@ public class Progress
 	 * @param context
 	 * @return value of ContextualAlt2
 	 */
-	public final Integer getContextualAlt2(IContext context)
+	public final Integer getContextualAlt2(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (Integer) getMendixObject().getValue(context, MemberNames.ContextualAlt2.toString());
 	}
@@ -231,7 +225,7 @@ public class Progress
 	 * @param context
 	 * @param contextualalt2
 	 */
-	public final void setContextualAlt2(IContext context, Integer contextualalt2)
+	public final void setContextualAlt2(com.mendix.systemwideinterfaces.core.IContext context, Integer contextualalt2)
 	{
 		getMendixObject().setValue(context, MemberNames.ContextualAlt2.toString(), contextualalt2);
 	}
@@ -248,7 +242,7 @@ public class Progress
 	 * @param context
 	 * @return value of ContextualAlt3
 	 */
-	public final Integer getContextualAlt3(IContext context)
+	public final Integer getContextualAlt3(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (Integer) getMendixObject().getValue(context, MemberNames.ContextualAlt3.toString());
 	}
@@ -267,7 +261,7 @@ public class Progress
 	 * @param context
 	 * @param contextualalt3
 	 */
-	public final void setContextualAlt3(IContext context, Integer contextualalt3)
+	public final void setContextualAlt3(com.mendix.systemwideinterfaces.core.IContext context, Integer contextualalt3)
 	{
 		getMendixObject().setValue(context, MemberNames.ContextualAlt3.toString(), contextualalt3);
 	}
@@ -284,7 +278,7 @@ public class Progress
 	 * @param context
 	 * @return value of ContextualAlt4
 	 */
-	public final Integer getContextualAlt4(IContext context)
+	public final Integer getContextualAlt4(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (Integer) getMendixObject().getValue(context, MemberNames.ContextualAlt4.toString());
 	}
@@ -303,7 +297,7 @@ public class Progress
 	 * @param context
 	 * @param contextualalt4
 	 */
-	public final void setContextualAlt4(IContext context, Integer contextualalt4)
+	public final void setContextualAlt4(com.mendix.systemwideinterfaces.core.IContext context, Integer contextualalt4)
 	{
 		getMendixObject().setValue(context, MemberNames.ContextualAlt4.toString(), contextualalt4);
 	}
@@ -320,7 +314,7 @@ public class Progress
 	 * @param context
 	 * @return value of Striped1
 	 */
-	public final Integer getStriped1(IContext context)
+	public final Integer getStriped1(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (Integer) getMendixObject().getValue(context, MemberNames.Striped1.toString());
 	}
@@ -339,7 +333,7 @@ public class Progress
 	 * @param context
 	 * @param striped1
 	 */
-	public final void setStriped1(IContext context, Integer striped1)
+	public final void setStriped1(com.mendix.systemwideinterfaces.core.IContext context, Integer striped1)
 	{
 		getMendixObject().setValue(context, MemberNames.Striped1.toString(), striped1);
 	}
@@ -356,7 +350,7 @@ public class Progress
 	 * @param context
 	 * @return value of Striped2
 	 */
-	public final Integer getStriped2(IContext context)
+	public final Integer getStriped2(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (Integer) getMendixObject().getValue(context, MemberNames.Striped2.toString());
 	}
@@ -375,7 +369,7 @@ public class Progress
 	 * @param context
 	 * @param striped2
 	 */
-	public final void setStriped2(IContext context, Integer striped2)
+	public final void setStriped2(com.mendix.systemwideinterfaces.core.IContext context, Integer striped2)
 	{
 		getMendixObject().setValue(context, MemberNames.Striped2.toString(), striped2);
 	}
@@ -392,7 +386,7 @@ public class Progress
 	 * @param context
 	 * @return value of Striped3
 	 */
-	public final Integer getStriped3(IContext context)
+	public final Integer getStriped3(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (Integer) getMendixObject().getValue(context, MemberNames.Striped3.toString());
 	}
@@ -411,7 +405,7 @@ public class Progress
 	 * @param context
 	 * @param striped3
 	 */
-	public final void setStriped3(IContext context, Integer striped3)
+	public final void setStriped3(com.mendix.systemwideinterfaces.core.IContext context, Integer striped3)
 	{
 		getMendixObject().setValue(context, MemberNames.Striped3.toString(), striped3);
 	}
@@ -428,7 +422,7 @@ public class Progress
 	 * @param context
 	 * @return value of Striped4
 	 */
-	public final Integer getStriped4(IContext context)
+	public final Integer getStriped4(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (Integer) getMendixObject().getValue(context, MemberNames.Striped4.toString());
 	}
@@ -447,7 +441,7 @@ public class Progress
 	 * @param context
 	 * @param striped4
 	 */
-	public final void setStriped4(IContext context, Integer striped4)
+	public final void setStriped4(com.mendix.systemwideinterfaces.core.IContext context, Integer striped4)
 	{
 		getMendixObject().setValue(context, MemberNames.Striped4.toString(), striped4);
 	}
@@ -464,7 +458,7 @@ public class Progress
 	 * @param context
 	 * @return value of Animated
 	 */
-	public final Integer getAnimated(IContext context)
+	public final Integer getAnimated(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (Integer) getMendixObject().getValue(context, MemberNames.Animated.toString());
 	}
@@ -483,7 +477,7 @@ public class Progress
 	 * @param context
 	 * @param animated
 	 */
-	public final void setAnimated(IContext context, Integer animated)
+	public final void setAnimated(com.mendix.systemwideinterfaces.core.IContext context, Integer animated)
 	{
 		getMendixObject().setValue(context, MemberNames.Animated.toString(), animated);
 	}
@@ -500,7 +494,7 @@ public class Progress
 	 * @param context
 	 * @return value of Stacked1
 	 */
-	public final Integer getStacked1(IContext context)
+	public final Integer getStacked1(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (Integer) getMendixObject().getValue(context, MemberNames.Stacked1.toString());
 	}
@@ -519,7 +513,7 @@ public class Progress
 	 * @param context
 	 * @param stacked1
 	 */
-	public final void setStacked1(IContext context, Integer stacked1)
+	public final void setStacked1(com.mendix.systemwideinterfaces.core.IContext context, Integer stacked1)
 	{
 		getMendixObject().setValue(context, MemberNames.Stacked1.toString(), stacked1);
 	}
@@ -536,7 +530,7 @@ public class Progress
 	 * @param context
 	 * @return value of Stacked2
 	 */
-	public final Integer getStacked2(IContext context)
+	public final Integer getStacked2(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (Integer) getMendixObject().getValue(context, MemberNames.Stacked2.toString());
 	}
@@ -555,7 +549,7 @@ public class Progress
 	 * @param context
 	 * @param stacked2
 	 */
-	public final void setStacked2(IContext context, Integer stacked2)
+	public final void setStacked2(com.mendix.systemwideinterfaces.core.IContext context, Integer stacked2)
 	{
 		getMendixObject().setValue(context, MemberNames.Stacked2.toString(), stacked2);
 	}
@@ -572,7 +566,7 @@ public class Progress
 	 * @param context
 	 * @return value of Stacked3
 	 */
-	public final Integer getStacked3(IContext context)
+	public final Integer getStacked3(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (Integer) getMendixObject().getValue(context, MemberNames.Stacked3.toString());
 	}
@@ -591,7 +585,7 @@ public class Progress
 	 * @param context
 	 * @param stacked3
 	 */
-	public final void setStacked3(IContext context, Integer stacked3)
+	public final void setStacked3(com.mendix.systemwideinterfaces.core.IContext context, Integer stacked3)
 	{
 		getMendixObject().setValue(context, MemberNames.Stacked3.toString(), stacked3);
 	}
@@ -599,7 +593,7 @@ public class Progress
 	/**
 	 * @return the IMendixObject instance of this proxy for use in the Core interface.
 	 */
-	public final IMendixObject getMendixObject()
+	public final com.mendix.systemwideinterfaces.core.IMendixObject getMendixObject()
 	{
 		return progressMendixObject;
 	}
@@ -607,7 +601,7 @@ public class Progress
 	/**
 	 * @return the IContext instance of this proxy, or null if no IContext instance was specified at initialization.
 	 */
-	public final IContext getContext()
+	public final com.mendix.systemwideinterfaces.core.IContext getContext()
 	{
 		return context;
 	}
@@ -635,7 +629,7 @@ public class Progress
 	/**
 	 * @return String name of this class
 	 */
-	public static String getType()
+	public static java.lang.String getType()
 	{
 		return "Bootswatch.Progress";
 	}
@@ -645,7 +639,7 @@ public class Progress
 	 * @deprecated Use getMendixObject().getId().toLong() to get a unique identifier for this object.
 	 */
 	@Deprecated
-	public String getGUID()
+	public java.lang.String getGUID()
 	{
 		return "ID_" + getMendixObject().getId().toLong();
 	}
