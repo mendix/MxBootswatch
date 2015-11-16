@@ -7,9 +7,9 @@
         <title>Bootswatch</title>
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
         <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="stylesheet" href="ui/theme-paper/css/bootstrap.min.css">
-        <link rel="stylesheet" href="mxclientsystem/mxui/ui/mxui.css">
-         <link rel="stylesheet" href="ui/theme-paper/css/mendix-custom.css">
+        <link rel="stylesheet" href="ui/theme-paper/css/bootstrap.min.css?{{cachebust}}">
+        <link rel="stylesheet" href="mxclientsystem/mxui/ui/mxui.css?{{cachebust}}">
+         <link rel="stylesheet" href="ui/theme-paper/css/mendix-custom.css?{{cachebust}}">
               <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -26,11 +26,15 @@
         <div id="content"></div>
         <script>
             dojoConfig = {
-                isDebug: false,
-                rtlRedirect: "index-rtl.html",
-                baseUrl: "mxclientsystem/dojo/"
+                baseUrl: "mxclientsystem/dojo/",
+                cacheBust: "{{cachebust}}",
+                rtlRedirect: "index-rtl.html"
             };
         </script>
-        <script src="mxclientsystem/mxui/mxui.js"></script>
+                <script>
+            if (!document.cookie || !document.cookie.match(/(^|;)originURI=/gi))
+                document.cookie = "originURI=/login.html";
+        </script>
+        <script src="mxclientsystem/mxui/mxui.js?{{cachebust}}"></script>
     </body>
 </html>

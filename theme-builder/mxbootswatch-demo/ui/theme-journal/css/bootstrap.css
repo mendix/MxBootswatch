@@ -7032,9 +7032,9 @@ button.close {
   list-style: none;
   padding-left: 0px;
 }
-input[type="radio"],
-input[type="checkbox"] {
-  margin: 4px 0 0 !important;
+.radio-inline input[type="radio"] {
+  margin: 0px 5px 0px 0px !important;
+  position: relative;
 }
 .nopadding > td {
   padding: 0px;
@@ -7316,19 +7316,19 @@ input[type="checkbox"] {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.app-sidebar {
+.app-sidebar.mx-scrollcontainer-toggleable {
   background: #ffffff;
 }
-.app-sidebar .mx-layoutcontainer-wrapper {
+.app-sidebar.mx-scrollcontainer-toggleable .mx-layoutcontainer-wrapper {
   padding: 0px;
 }
-.app-sidebar .navbar {
+.app-sidebar.mx-scrollcontainer-toggleable .navbar {
   width: 100%;
   border: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.app-sidebar .navbar .nav {
+.app-sidebar.mx-scrollcontainer-toggleable .navbar .nav {
   margin: 0px;
 }
 .navbar-nav {
@@ -7336,4 +7336,7 @@ input[type="checkbox"] {
 }
 .mx-layoutcontainer-middle .mx-layoutcontainer-wrapper.mx-layoutcontainer-nested {
   overflow: hidden;
+}
+.mx-grid-search-input .mx-selectbox {
+  height: auto;
 }

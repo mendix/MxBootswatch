@@ -148,12 +148,16 @@
     outline: none !important;
 }
 
+
 .RadioButtonList ul{
     list-style: none;
     padding-left: 0px;
 }
-input[type="radio"], input[type="checkbox"] {
-    margin: 4px 0 0 !important;
+.radio-inline{
+    input[type="radio"]{
+        margin: 0px 5px 0px 0px !important;
+        position: relative;
+    }
 }
 .nopadding > td{
     padding:0px;
@@ -460,7 +464,7 @@ input[type="radio"], input[type="checkbox"] {
     color: @navbar-default-link-color;
     
 }
-.app-sidebar{
+.app-sidebar.mx-scrollcontainer-toggleable{
     background: @navbar-default-bg;
     .mx-layoutcontainer-wrapper{
         padding:0px;
@@ -482,4 +486,10 @@ input[type="radio"], input[type="checkbox"] {
     .mx-layoutcontainer-wrapper.mx-layoutcontainer-nested{
         overflow: hidden;
     }
+}
+
+.mx-grid-search-input{
+    .mx-selectbox{
+        height:auto;
+    }   
 }
