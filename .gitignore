@@ -9,6 +9,8 @@
 .mendix-cache
 proxies
 .project
+/node_modules
+/theme-builder/node_modules
 
 #mxgit-marker-start
 /.svn
